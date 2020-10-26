@@ -48,16 +48,17 @@ public class Unsolved {
 	while (true) {	
 		
 		// create a new HashMap for each student, for each iteration
-		HashMap<String, String> student = new HashMap();
+		HashMap<String, String> student = new HashMap<>();
 		
 	    System.out.print("Please enter the student's first name. ");
 	    if (input.hasNext()) {
-	    	
+	    	student.put("first", input.next());
 	    }
-	    String firstName = input.next();
 
 	    System.out.print("Please enter the student's last name. ");
-	    String lastName = input.next();
+	    if (input.hasNext()) {
+	    	student.put("last", input.next());
+	    }
 
 	    System.out.print("Please enter the student's middle initial. ");
 	    String middleInitial = input.next();
@@ -79,17 +80,12 @@ public class Unsolved {
 	    /* Refactor this to print the value of each key iteratively. Use
 	     *   String.format, and substitute the key/value names into the string.
 	     */
-	    System.out.println(String.format("The student's first name is %s. ", firstName));
-
-	    System.out.println(String.format("The student's last name is %s. ", lastName));
-
-	    System.out.println(String.format("The student's middle initial is %s. ", middleInitial));
-
-	    System.out.println(String.format("The student's address is %s. ", address));
-
-	    System.out.println(String.format("The student's email is %s. ", email));
-
-	    System.out.println(String.format("The student's phone number is %s. ", phoneNumber));
+	    
+	   // Print the student's attributes
+	   student.forEach((attribute, value) -> {;
+	   System.out.println(String.format("The students %s id %s.", attribute, value));
+	   });
+	    
 
 	    // Don't change this confirmation code just yet!
 	    System.out.print("Is this information correct?");
