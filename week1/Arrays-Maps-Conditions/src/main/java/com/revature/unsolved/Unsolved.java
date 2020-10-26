@@ -1,5 +1,7 @@
 package com.revature.unsolved;
 
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.Scanner;
 
 // You will need to import the HashMap...
@@ -38,10 +40,20 @@ public class Unsolved {
 	     *************************************************************************/
 		
 		Scanner input = new Scanner(System.in);
+		ArrayList<HashMap<String, String>> students = new ArrayList<>();
+		
 		
 		// ---- NAME INFORMATION ----
+	
+	while (true) {	
+		
+		// create a new HashMap for each student, for each iteration
+		HashMap<String, String> student = new HashMap();
 		
 	    System.out.print("Please enter the student's first name. ");
+	    if (input.hasNext()) {
+	    	
+	    }
 	    String firstName = input.next();
 
 	    System.out.print("Please enter the student's last name. ");
@@ -83,6 +95,7 @@ public class Unsolved {
 	    System.out.print("Is this information correct?");
 	    String confirmation = input.next();
 
-	}
+		}
 
+	}
 }
