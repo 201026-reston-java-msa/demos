@@ -8,3 +8,9 @@ You can go ahead and join the batch Hackerrank contest beginning on Monday Octob
 ### Most Recent Slides can be found [here](https://docs.google.com/presentation/d/1Mfb745mCnQUEu-dqElkItbeV-aQLqLMbP0cHSIPPWLE/edit?usp=sharing)
 
 ### Environment Setup Guide can be found [here](https://github.com/sophiagavrila/environment-setup).
+---
+
+## Weekly Schedule:
+* Class starts 10:00am EST M-F, ends at 6:00pm M-Th, 1pm on Friday
+* 1 hour lunch break at 1:00pm - 2:00pm EST T-F. (12:45pm - 2:00pm lunch on Monday).
+* Mondays will be our 1-on-1 Interview days - you will have a 10-15 minute interview with Sophia.  If you're not interviewing, you'll be working on your projects or studying for QC. 
