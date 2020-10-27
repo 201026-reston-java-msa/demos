@@ -27,6 +27,15 @@ public class Dog extends Animal {
 		System.out.println("Dog.eat() has been called");
 		chew();
 	}
+
+	@Override
+	public String toString() {
+		return "Dog [eyes=" + eyes + ", legs=" + legs + ", tail=" + tail + ", teeth=" + teeth + ", coat=" + coat
+				+ ", getName()=" + getName() + ", getBrain()=" + getBrain() + ", getSize()=" + getSize()
+				+ ", getWeight()=" + getWeight() + "]";
+	}
+	
+	
 	
 	
 	
