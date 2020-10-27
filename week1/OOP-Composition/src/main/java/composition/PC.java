@@ -36,9 +36,5 @@ public class PC {
 		this.motherboard = motherboard;
 	}
 
-	@Override
-	public String toString() {
-		return "PC [theCase=" + theCase + ", monitor=" + monitor + ", motherboard=" + motherboard + "]";
-	}
 	
 }
