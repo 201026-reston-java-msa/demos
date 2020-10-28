@@ -7,9 +7,11 @@ import java.io.IOException;
 public class UncheckedException {
 
 	// the throws keyword in a method declares the type of exceptions that may occur
-	// so that we can handle them
+	// THROWS --> SENDS TO CALLER METHOD
+	// THROW --> SENDS TO JVM
 	public static void main(String[] args) {
 		
+		// this is an example of try with resources
 		try {
 			FileReader file = new FileReader("C:\\users\\downloads\\x.txt");
 			BufferedReader fileInput = new BufferedReader(file);
