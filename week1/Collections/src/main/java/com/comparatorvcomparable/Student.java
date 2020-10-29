@@ -39,6 +39,8 @@ public class Student implements Comparable<Student>{
 
 		// compare name
 		//return this.name.compareTo(student.getName());
+		
+		// compare grade - returns neg, pos, or 0
 		return y - x;
 	}
 
