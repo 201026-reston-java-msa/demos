@@ -1,0 +1,13 @@
+2020-10-30 12:24:26 INFO  Driver:39 - PROGRAM START
+2020-10-30 12:24:26 WARN  Driver:45 - WARNING: Division by zero occured!
+java.lang.ArithmeticException: / by zero
+	at com.loggingpractice.Driver.main(Driver.java:42)
+2020-10-30 12:24:26 INFO  Driver:48 - PROMGRAM END
+2020-10-30 12:25:33 INFO  Driver:39 - PROGRAM START
+2020-10-30 12:25:33 WARN  Driver:45 - WARNING: Division by zero occured!
+java.lang.ArithmeticException: / by zero
+	at com.loggingpractice.Driver.main(Driver.java:42)
+2020-10-30 12:25:33 INFO  Driver:48 - PROGRAM END
+2020-10-30 12:26:49 WARN  Driver:45 - WARNING: Division by zero occured!
+java.lang.ArithmeticException: / by zero
+	at com.loggingpractice.Driver.main(Driver.java:42)

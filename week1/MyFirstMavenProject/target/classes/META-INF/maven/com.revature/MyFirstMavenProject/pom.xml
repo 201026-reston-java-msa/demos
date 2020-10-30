@@ -9,8 +9,14 @@
 	<!-- ^ Project Coordinates (basic makeup/description -->
 	<!-- Project Object Model -->
 
+	<properties>
+		<maven.compiler.source>1.8</maven.compiler.source>
+		<maven.compiler.target>1.8</maven.compiler.target>
+	</properties>
+
+
 	<dependencies>
-	<!-- https://mvnrepository.com/artifact/junit/junit -->
+		<!-- https://mvnrepository.com/artifact/junit/junit -->
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
@@ -25,19 +31,13 @@
 			<artifactId>log4j</artifactId>
 			<version>1.2.17</version>
 		</dependency>
-		
+
 	</dependencies>
 
-<!-- A Maven build is: to take the project source code + dependencies like libraries/frameworks
-compile it, and bundle it all together into the form of either a JAR, a WAR file or an EAR. -->
+	<!-- A Maven build is: to take the project source code + dependencies like 
+		libraries/frameworks compile it, and bundle it all together into the form 
+		of either a JAR, a WAR file or an EAR. -->
 
-<!-- 
-1. Validate
-2. Compile
-3. Test 
-4.Package
-5. Integration
-6. Verify
-7. Install in local repository
-8. Deploy in remote repository -->
+	<!-- 1. Validate 2. Compile 3. Test 4.Package 5. Integration 6. Verify 7. 
+		Install in local repository 8. Deploy in remote repository -->
 </project>
