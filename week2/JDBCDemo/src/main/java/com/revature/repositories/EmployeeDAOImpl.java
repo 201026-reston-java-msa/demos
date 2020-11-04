@@ -1,5 +1,6 @@
 package com.revature.repositories;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.apache.log4j.Logger;
@@ -11,7 +12,11 @@ public class EmployeeDAOImpl implements EmployeeDAO{
 	private static Logger log = Logger.getLogger(EmployeeDAOImpl.class);
 	
 	public List<Employee> findAll() {
-		// TODO Auto-generated method stub
+		
+		List<Employee> list = new ArrayList<>();
+		
+ 		
+		
 		return null;
 	}
 
