@@ -34,3 +34,36 @@ In this exercise you will practice populating a database by running the provided
 
 #### 2.7 DELETE
 * Delete a record in Customer table where the name is Robert Walter (There may be constraints that rely on this, find out how to resolve them).
+
+## Advanced Challenges (added 1:42PM 11/04/2020)
+Here are some extra challenges that you can attempt:
+
+#### 3.0 JOINS
+In this section you will be working with combining various tables through the use of joins. You will work with outer, inner, right, left, cross, and self joins.
+
+#### 3.1 INNER
+* Create an inner join that joins customers and orders and specifies the name of the customer and the invoiceId.
+
+#### 3.2 OUTER
+* Create an outer join that joins the customer and invoice table, specifying the CustomerId, firstname, lastname, invoiceId, and total.
+
+#### 3.3 RIGHT
+* Create a right join that joins album and artist specifying artist name and title.
+
+#### 3.4 CROSS
+* Create a cross join that joins album and artist and sorts by artist name in ascending order.
+
+#### 3.5 SELF
+* Perform a self-join on the employee table, joining on the reportsto column.
+
+#### 4.2 System Defined Aggregate Functions
+* Create a function that returns the average total of all invoices 
+* Create a function that returns the most expensive track
+
+#### 4.3 User Defined Scalar Functions
+* Create a function that returns the average price of invoiceline items in the invoiceline table
+
+#### 4.4 User Defined Table Valued Functions
+* Create a function that returns all employees who are born after 1968.
+
+
