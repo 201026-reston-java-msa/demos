@@ -12,9 +12,20 @@ public class ConnectionUtil {
 	
 	public static Connection getConnection() {
 		
+		/*
+		 * This URL includes the driver we're using, which is from Postgres
+		 * as well as the computer (which is localhost) and the PORT 
+		 * which is 5432 by default
+		 * 
+		 * the last '/' is important becauase it refers to the specific db we're connecting to
+		 * (If you only have one DB, you don't need to specify).
+		 */
+		
+		
 		String url = "jdbc:postgresql://localhost:5432/";
 		String username = "postgres";
 		String password = "postgres";
+		
 		
 		Connection conn = null;
 		

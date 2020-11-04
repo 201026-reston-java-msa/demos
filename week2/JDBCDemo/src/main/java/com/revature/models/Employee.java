@@ -12,6 +12,15 @@ public class Employee {
 	public Employee() {
 		super();
 	}
+	
+	public Employee(String firstName, String lastName, String email, double salary, Employee supervisor) {
+		super();
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.email = email;
+		this.salary = salary;
+		this.supervisor = supervisor;
+	}
 
 	public Employee(int id, String firstName, String lastName, String email, double salary, Employee supervisor) {
 		super();
@@ -69,6 +78,12 @@ public class Employee {
 
 	public void setSupervisor(Employee supervisor) {
 		this.supervisor = supervisor;
+	}
+
+	@Override
+	public String toString() {
+		return "Employee [id=" + id + ", firstName=" + firstName + ", lastName=" + lastName + ", email=" + email
+				+ ", salary=" + salary + ", supervisor=" + supervisor + "]";
 	}
 	
 	
