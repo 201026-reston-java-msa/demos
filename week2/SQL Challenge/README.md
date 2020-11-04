@@ -56,3 +56,14 @@ In this section you will be working with combining various tables through the us
 #### 3.5 SELF
 * Perform a self-join on the employee table, joining on the reportsto column.
 
+#### 4.2 System Defined Aggregate Functions
+* Create a function that returns the average total of all invoices 
+* Create a function that returns the most expensive track
+
+#### 4.3 User Defined Scalar Functions
+* Create a function that returns the average price of invoiceline items in the invoiceline table
+
+#### 4.4 User Defined Table Valued Functions
+* Create a function that returns all employees who are born after 1968.
+
+
