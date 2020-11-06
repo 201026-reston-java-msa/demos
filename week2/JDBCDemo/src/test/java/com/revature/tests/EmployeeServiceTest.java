@@ -4,7 +4,9 @@ import static org.junit.Assert.assertEquals;
 import static org.mockito.Mockito.when;
 
 import org.junit.Before;
+import org.junit.Rule;
 import org.junit.Test;
+import org.junit.rules.ExpectedException;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.Mockito;
@@ -61,6 +63,21 @@ public class EmployeeServiceTest {
 	 * 
 	 */
 	
+	@Test(expected = NullPointerException.class) // use attribute and assign to expected Exception to be thrown
+	public void whenExceptionThrown_theExceptionIsSatisfied() {
+		String word = null;
+		
+		// this automatically results in an Exception
+		word.length();
+	}
+	
+	@Rule 
+	public ExpectedException e = ExpectedException.none();
+	
+	@Test
+	public void testArithmetic() {
+		int i = 1/0;
+	}
 }
 
 
