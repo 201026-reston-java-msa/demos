@@ -25,7 +25,7 @@ public class EmployeeService {
 		return repository.findAll();
 	}
 	
-	public boolean insert(Employee employee) {
+	public boolean addEmployee(Employee employee) {
 		return repository.insert(employee);
 	}
 

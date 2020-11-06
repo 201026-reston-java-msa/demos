@@ -19,7 +19,7 @@ public class Driver {
 		}
 		
 		Employee bob = new Employee("Bob", "Smithers", "bs@gmail.com", 20000.05, null);
-		es.insert(bob);
+		es.addEmployee(bob);
 		
 		
 
