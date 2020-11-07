@@ -6,7 +6,7 @@
 3. List 3 advantages of cloud computing over the traditional on-premises model.
 4. What is AWS?
 5. What is Amazon RDS?
-6. What type of RDBMS Vendors does Amazon RDS support?
+6. What types of RDBMS Vendors does Amazon RDS support?
 7. What are security groups?
 8. How do you connect to an Amazon RDS?
 9. What is Amazon EC2?
