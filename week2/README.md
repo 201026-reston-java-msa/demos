@@ -15,6 +15,8 @@
 12. Name 2 ways to connect to an Linux EC2 Instance. *Hint: Check out AWS documentation [here](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/AccessingInstances.html).  We connected using **one** of these methods in class.*
 13. What is an AMI (Amazon Machine Image)? How is it used in relation to and EC2?
 
+
+---
 # SQL Notes
 *The following are topics that you may be asked about in our interviews on Monday*.
 
