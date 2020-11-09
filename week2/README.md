@@ -2,7 +2,7 @@
 *The following are questions that you may be asked about Amazon Web Services and Cloud Computing Models.*
 
 1. What is cloud computing?
-2. What are the 2 models of cloud computing? *(Explain IaaS, PaaS, SaaS).*
+2. What are the 3 models of cloud computing? *(Explain IaaS, PaaS, SaaS).*
 3. List 3 advantages of cloud computing over the traditional on-premises model.
 4. What is AWS?
 5. What is Amazon RDS?
