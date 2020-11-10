@@ -1,10 +1,10 @@
 # Instructions
 
-* Put all of this code inside a folder, and put the folder in a place where you normally code. 
-* Make a folder called `css`.
+* Copy the `html-bio-with-css.html` code and create a new `.html` file within a fresh folder in VSCode. 
+* Within the same folder whre `html-bio-with-css.html` is located, make a folder called `css`.
 * Make a file called `style.css` inside of the `css` folder.
 * Reference the `style.css` in your `html-bio-with-css.html` file. You do this by placing `<link rel="stylesheet" type="text/css" href="css/style.css">` inside the `<head>` tag.
-* Style the example on the projector.
+* Style the example on the in [demo.png](./demo.png).
   * Add a `class` called "container" on the `div` tag. For example: `<div class="container">`.
   * Add an `id` called "main-bio" for the first `section` tag.
   * Add an `id` called "contact-info" for the second `section` tag.
