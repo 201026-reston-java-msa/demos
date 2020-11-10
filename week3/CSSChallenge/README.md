@@ -4,8 +4,8 @@
 ![demo](./demo.png)  
 
 
-* Copy the `html-bio-with-css.html` code and create a new `.html` file within a fresh folder in VSCode. 
-* Within the same folder whre `html-bio-with-css.html` is located, make a folder called `css`.
+* Copy the `html-bio-with-css.html` code from [here](./html-bio-with-css.html) and create a new `.html` file within a fresh folder in VSCode. 
+* Within the same folder where `html-bio-with-css.html` is located, make a folder called `css`.
 * Make a file called `style.css` inside of the `css` folder.
 * Reference the `style.css` in your `html-bio-with-css.html` file. You do this by placing `<link rel="stylesheet" type="text/css" href="css/style.css">` inside the `<head>` tag.
 * Style the example *exactly* as you see above in [demo.png](./demo.png).
