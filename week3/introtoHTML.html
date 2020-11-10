@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<!-- The DOCTYPE declaration indicates that we're using HTML 5-->
+<html>
+    <head>
+        <!-- The head tag allows us to declare meta info about this html document
+        Here is where we will see inclusions of a CSS or JS file-->
+        <meta charset="UTF-8">
+            <!-- Character encoding allows us to properly validate an html documetn and covert binary numbers/
+            byte to characters-->
+        <title>Intro to HTML</title>
+    </head>
+
+    <body>
+        <!--Header tags are the first of many HTML tags used 
+        to display our content-->
+
+        <h1>Header 1</h1>
+        <h2>Header 2</h2>
+        <h3>Header 3....it goes all the way up to 6</h3>
+
+        <!-- Header tags are generall larger sized text to display an
+        overall category-->
+
+        <p>This is a paragraph, used to display lots of text.
+            Generally, HTML will ignore large whitespaces, expect for defined spaces.
+
+
+
+
+
+
+
+            I have put blank lines above.  Let's see what happens.
+
+            Here is lots of temporary text.
+            Here is lots of temporary text.
+            Here is lots of temporary text.
+            Here is lots of temporary text.
+            Here is lots of temporary text.
+            Here is lots of temporary text.
+            Here is lots of temporary text.
+            Here is lots of temporary text.
+            Here is lots of temporary text.
+        </p> 
+        <br />
+        <!-- The above line is called a line break
+        This is a newline character...
+    Since the paragraph tag IGNORES all whitespace, this is how
+we get new lines.
+Additionally we have provided a self-closing tag with a forward slash-->
+        <p>Here is another paragraph</p>
+        <p>Here is yet another paragraph</p>
+        
+    <!--There are two types of lists: Ordered and Unordered-->
+    <ol type="A">
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+    </ol>
+
+    <ul>
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+    </ul>
+
+    <div>
+        <!-- The div tage represents a divider around some of the content-->
+        <table>
+            <caption>Some Caption</caption>
+            <thead>
+                <tr>
+                    <th>Header 1</th>
+                    <th>Header 2</th>
+                    <th>Header 3</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Cell 1A</td>
+                    <td>Cell 1B</td>
+                    <td>Cell 1C</td>
+                </tr>
+                <tr>
+                    <td>Cell 2A</td>
+                    <td>Cell 2B</td>
+                    <td>Cell 2C</td>
+                </tr>
+                <tr>
+                    <td>Cell 3A</td>
+                    <td>Cell 3B</td>
+                    <td>Cell 3C</td>
+                </tr>   
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td>Footer A</td>
+                    <td>Footer B</td>
+                    <td>Footer C</td>
+                </tr>
+            </tfoot>
+        </table>
+        <!-- The TABLE TAG is used to create a table in HTML.  It contains several components inside such as header, body, and footer-->
+
+        <!--Inside each of those components we use the tr tag to represent a table row, and td to represent table data-->
+    </div>
+
+    <img src="spongebob.jpg" width="300"/>
+
+    <h1>Semantic Tags</h1>
+    <!--Semantic Tags are tags that are names in a specific way so that they are easier to read by humans.
+    
+    They help discern the intentions of the developer who wrote the HTML document-->
+
+    <!-- Note that they are not very different from regular tags, they just aim to more clearly specify the purpose of a segement of html
+    Examples: header, footer, nav, article, etc. -->
+    <header>
+        <h2>I am a header</h2>
+        <p>Usually this would be at the top of a webpage</p>
+    </header>
+
+    <footer>
+        <h2>I am a footer</h2>
+        <p>Usually this would be at the bottom of a webpage</p>
+    </footer>
+
+    <!-- Nav is usually used to enclose a section that has links...You know...like a nav bar-->
+
+    <nav>
+        <h2>Navigate to these links</h2>
+        <a href="https://www.google.com/">Google</a>
+        <a href="https://duckduckgo.com/?va=b&t=hc">Duck Duck Go</a>
+        <a href="https://www.bing.com/">Bing</a>
+    </nav>
+
+    <!--Attributes-->
+    <!--
+        An attribute is used to define a characteristic of an HTML element.
+
+        - Attributes are placed WITHIN an element's opening tag
+        - All attributes are composed of 2 parts: name & value
+            + the name is thr property that you want to set
+            + The values is what you want the property to be set to.
+    -->
+    <p align="left">This paragraph is left aligned</p>
+    <p align="center">This paragraph is center aligned</p>
+    <p align="right">This paragraph is right aligned</p>
+
+    <!--The title attributte gives a suggested title for the element-->
+    <h4 title="This is my first attribute!">Hover over me!</h4>
+
+    <h3>The ID Attribute</h3>
+    <!-- The id attribute of an html tag can be used to uniquely identiy that tag within an html page 
+    
+    There are 2 main reasons why you would use an id
+
+        1. If an element carries an id attribute as a unique identifier, it is possible to identify JUST that element and its content for use in things like JavaScript
+    
+        2. If you have 2 elements of the same name within a web page, you can distinguish between them-->
+
+    <p id="id1">This paragraph talks about html</p>
+    <p id="id2">This paragraph talks about CSS</p>
+
+    <h2>The Style Attribute</h2>
+    <!-- The style attrbiute can of course be used to style individual elemenets in misc ways such as coloring the text, the text background or changing the font, and many others-->
+    </body>
+
+    <p style="font-family: wingdings; color:greenyellow; background-color: lightslategrey;">Some special text</p>
+    <p style="font-family: Arial, Helvetica, sans-serif; color:greenyellow; background-color: lightslategrey;">Some special text (translated from wingdings)</p>
+
+    <h2>HTML Forms</h2>
+    <form action=""> <!--Action describes what you want to do with the input information-->
+        Username: <input type="text" name="username"/>
+        <br />
+        <br />
+        Password: <input type="password" name="password"/>
+        <br />
+        <input type="radio" name="yes" unchecked> Yes!
+        <br />
+        <!-- Radios of the same name allow only one of them to be checked at the same time-->
+        <input type="radio" name="yes" unchecked> A different Yes!
+        <br />
+        <input type="checkbox" name="no" unchecked> No
+        <br />
+        <input type="checkbox" name="no" unchecked> Another No
+    </form>
+
+</html>
+
+
+
+
+
+
+
+
+
