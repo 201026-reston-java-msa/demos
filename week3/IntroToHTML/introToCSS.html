@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>CSS - Cascading Style Sheets</title>
+        <style>
+
+            body {
+                max-width: 800px;
+                margin: auto;
+                font-family: 'Indie Flower', cursive;
+            }
+
+            div {
+                font-size: xx-large;
+                color: rebeccapurple;
+                background-color:silver;
+                width: 50%;
+                margin: auto;
+            }
+
+            #special-div {
+                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                font-size: medium;
+                color: black;
+                background-color: burlywood;
+                padding-left: 30%;
+                border: 2px solid black;
+            }
+
+            .my-special-class {
+                margin-top: 30px;
+                border: 2px dashed rebeccapurple;
+                padding: 3%;
+                border-radius: 20px;
+                line-height: 18px;
+            }
+            /*
+            This is a comment in CSS! So this particular tag specifies that we will
+            incorporate internal CSS in this HTML document: NaN NaN NaN;More on that later
+            */
+        </style>
+    </head>
+
+    <body>
+        <h1>Intro to CSS</h1>
+        <p>We have a pretty good understanding of HTML, but all of our pages look kinda
+            plain.  The browser applies default styling such as <code>strong</code>, 
+            which makes text <strong>bold</strong>. <em>But how do we make it look nicer
+                ?
+            </em>
+        </p> 
+
+        <p>
+            CSS stands for Cascading Style Sheets.  There are 3 ways to include CSS in an
+            html page:
+
+            <ol>
+                <li>Inline (with the style attribute)</li>
+                <li>Using internal stylesheets (using the style element in the head of the doc)</li>
+                <li>Using external stylesheets (we link to an external .css document)</li>
+            </ol>
+
+            Css rules are key-value pairs, separated by a colon ( : ).
+            There are many rules that we can apply.  One example is <code>color</code>
+            <br>
+            <code style="color:blueviolet">This is an example of the color rule.</code>
+
+            <span style="color: crimson; background-color: darkgray;">Some more text here to demonstrate more CSS rules</span>
+            <br />
+            <p>The above is <strong>inline styling</strong>.  The following is <strong>internal styling</strong></p>
+        </p>
+
+        <h2>Selectors</h2>
+            <div>
+                <p>This is an example of how div divides and containerizes our code, so that styling it is easier
+                    since we're referencing this content's selector.
+                </p>
+            </div>
+
+            <h4>ID and Class Selectors</h4>
+            <div id="special-div">
+                <p>We are able to sleect elements by more than just their tag.  We can give particular elements special ID's or a particular class.  Classes are selected by a . and id's are selected by a #.                
+                </p>
+
+                <p class="my-special-class"> This paragraph has a particular class we have named my-special-class.  We can apply styling to all elements with this particular class name with a dot.</p>
+
+            </div>
+        
+    </body>
+
+
+</html>
