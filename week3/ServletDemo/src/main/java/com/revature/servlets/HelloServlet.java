@@ -59,9 +59,22 @@ public class HelloServlet extends HttpServlet{
 		PrintWriter pw = res.getWriter();
 //		pw.write("Hey world!");
 		pw.write("<html><head><title>Hello World!</title></head><body>;");
-		pw.write("<h1>Hello World...</h1></body></html>");
+		pw.write("<h1>Hello World...</h1>"
+		+ "<a href='index.html'> request a color</a></body></html>");
 	}
 	
+	@Override
+	protected void doPost(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
+		log.trace("Handling a POST request");
+		String color = null;
+		color = req.getParameter("color");
+		log.trace("Color recieved is " + color);
+		res.getWriter().write("<html><head><title>Colors!</title></head>"
+				+ "<body style=\"background-color:" + color + "\">"
+				+ "<a href=\"index.html\">Go Back</a>"
+				+"<br><a href=\"hello\">hello</a></body></html>");
+		
+	}
 	
 	@Override
 	public void service(ServletRequest req, ServletResponse res) throws ServletException, IOException {
