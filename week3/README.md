@@ -1,5 +1,5 @@
 # Study Guide for QC on Monday Nov. 16th, 2020
-*Remember that you will also have to refer to Week 2's QC study guide because you may be asked questions on SQL.*
+*Remember that you will also have to refer to [Week 2's QC study guide](https://github.com/201026-reston-java-msa/demos/blob/main/week2/README.md) because you may be asked questions on SQL.*
 
 ### Topics Covered in Week 3:
 * HTML
