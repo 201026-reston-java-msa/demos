@@ -1,39 +1,49 @@
 package com.revature.web;
 
 import java.io.IOException;
+import java.io.PrintWriter;
+import java.util.ArrayList;
+import java.util.List;
+
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.revature.models.Employee;
+import com.revature.models.EmployeeDTO;
+import com.revature.services.EmployeeService;
 
 /**
  * Servlet implementation class EmployeeServlet
  */
 public class EmployeeServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-       
-    /**
-     * @see HttpServlet#HttpServlet()
-     */
-    public EmployeeServlet() {
-        super();
-        // TODO Auto-generated constructor stub
-    }
+    
+	// an Object Mapper allows us to convert a Java object to JSON and vice versa
+	private static ObjectMapper om = new ObjectMapper();
 
-	/**
-	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
-	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		response.getWriter().append("Served at: ").append(request.getContextPath());
+		response.setContentType("application/json");
+		List<Employee> all = EmployeeService.findAll();
+		List<EmployeeDTO> allDTO = new ArrayList<>();
+		
+		for(Employee e : all) {
+			allDTO.add(new EmployeeDTO(e.getId(),
+					e.getFirstName(),
+					e.getLastName(),
+					e.getUsername(),
+					e.getPassword(),
+					e.getHireDate().toString()));
+		}
+		
+		String json = om.writeValueAsString(allDTO);
+		
+		PrintWriter pw = response.getWriter();
+		pw.println(json);
 	}
 
-	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
-	 */
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		doGet(request, response);
-	}
+
 
 }
