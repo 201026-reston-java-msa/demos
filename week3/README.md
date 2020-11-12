@@ -9,6 +9,8 @@
 * JavaScript
 > I will update this with more information soon.
 
+## Servlet QC Questions
+
 1.  What is a servlet? What about a servlet container? Which servlet container have you worked with?
 2.  Describe the servlet class inheritance hierarchy. What methods are declared in each class or interface?
 3.  How would you create your own servlet?
