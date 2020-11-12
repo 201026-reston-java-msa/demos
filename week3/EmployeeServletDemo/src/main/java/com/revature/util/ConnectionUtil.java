@@ -22,7 +22,8 @@ public class ConnectionUtil {
 		}
 		
 		Properties props = new Properties();
-		// This isn't always necessary but this object will search for files within our current project
+		// This isn't always necessary but this object will search for 
+		//files within our current project - makes it a lot easier to specify where it's located
 		ClassLoader loader = Thread.currentThread().getContextClassLoader();
 		Connection conn = null;
 		try {
