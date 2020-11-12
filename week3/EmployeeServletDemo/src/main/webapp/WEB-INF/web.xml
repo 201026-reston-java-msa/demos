@@ -10,5 +10,38 @@
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
   
+ <servlet>
+    <description></description>
+    <display-name>LoginServlet</display-name>
+    <servlet-name>LoginServlet</servlet-name>
+    <servlet-class>com.revature.web.LoginServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>LoginServlet</servlet-name>
+    <url-pattern>/login</url-pattern>
+  </servlet-mapping>
+  
+  
+  <servlet>
+    <description></description>
+    <display-name>LogoutServlet</display-name>
+    <servlet-name>LogoutServlet</servlet-name>
+    <servlet-class>com.revature.web.LogoutServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>LogoutServlet</servlet-name>
+    <url-pattern>/logout</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>EmployeeServlet</display-name>
+    <servlet-name>EmployeeServlet</servlet-name>
+    <servlet-class>com.revature.web.EmployeeServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>EmployeeServlet</servlet-name>
+    <url-pattern>/employee</url-pattern>
+  </servlet-mapping>
+  
   
 </web-app>
