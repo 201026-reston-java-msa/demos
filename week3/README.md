@@ -257,13 +257,13 @@
 22.  What will happen when I try to run this code: console.log(0.1+0.2==0.3) ?
     
 ### ES6+
-27.  What new features did ES6 introduce?
-28.  What is the difference between var, let, and const keywords?
-31.  Does JS have classes? If so, when were they introduced?
+23.  What new features did ES6 introduce?
+24.  What is the difference between var, let, and const keywords?
+25.  Does JS have classes? If so, when were they introduced?
 
 ### Events and DOM
-39.  What is the DOM? How is it represented as a data structure? What object in a browser environment allows us to interact with the DOM?
-40.  List some ways of querying the DOM for elements
-41.  How would you insert a new element into the DOM?
-42.  What are event listeners? What are some events we can listen for? What are some different ways of setting event listeners?
-44.  What are some methods on the event object and what do they do?
+26.  What is the DOM? How is it represented as a data structure? What object in a browser environment allows us to interact with the DOM?
+27.  List some ways of querying the DOM for elements
+28.  How would you insert a new element into the DOM?
+29.  What are event listeners? What are some events we can listen for? What are some different ways of setting event listeners?
+30.  What are some methods on the event object and what do they do?
