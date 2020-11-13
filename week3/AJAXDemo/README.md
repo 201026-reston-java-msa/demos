@@ -12,9 +12,9 @@ AJAX stands for **A**synchronous **J**avaScript **A** nd **X**ML. AJAX allows we
 
 1. Check out the `html` document [here](./ajax.html).
 2. Create a new `.html` file in VSCode and type out the html you see in the example.
-3. Create a new `.js` file in VSCode and link it to your html file.\
+3. Create a new `.js` file in VSCode and link it to your html file.
     > Remember, always put your `<script>` tag in the bottom of the `<body>` of your `.html` file.
-4. Follow the steps in the JavaScript file - the notes are there to explain what's going on and how AJAX works behind the scenes.
+4. Follow the steps in the [ajax.js demo file](./ajax.js) - the notes are there to explain what's going on and how AJAX works behind the scenes. Type the same code into your personal `.js` file.
 5. Get creative! Add some styling to your page, link to the Bootstrap4 CDN, or maybe swap out the Poke API for the [StarWars API](https://swapi.dev/). :slightly_smiling_face:	
 
 
