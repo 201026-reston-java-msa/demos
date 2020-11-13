@@ -41,7 +41,6 @@ public class LoginServlet extends HttpServlet {
 			session.setAttribute("username", username);
 			RequestDispatcher rd = request.getRequestDispatcher("home.html");// we want to send our user to the home page!
 			rd.forward(request, response);
-			
 			log.info(username + " has successfully logged on");
 		} else {
 			PrintWriter pw = HtmlTemplate.getHtmlWriter(response);
