@@ -2,7 +2,7 @@
 *Remember that you will also have to refer to [Week 2's QC study guide](https://github.com/201026-reston-java-msa/demos/blob/main/week2/README.md) because you may be asked questions on SQL.*
 
 > Keep In mind that we have covered a lot of info spanning across many different topics. QC questions will most likely be broken down into the following: <br>
-> - 25% SQL(https://github.com/201026-reston-java-msa/demos/blob/main/week2/README.md)
+> - 25% [SQL](https://github.com/201026-reston-java-msa/demos/blob/main/week2/README.md)
 > - 10% HTML
 > - 10% CSS
 > - 25% Servlets
