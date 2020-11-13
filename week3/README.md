@@ -8,13 +8,8 @@
 > - 25% Servlets
 > - 15% HTTP & Client/Server Architecture
 > - 15% JavaScript
-
-### Topics Covered in Week 3:
-* HTML
-* CSS
-* AWS S3 *just know what these are - nothing too in depth*
-* Servlets
-* JavaScript
+>
+> Scroll down and you will see that I have included QC questions for **Servlets** and **JavaScript**.
 
 ## HTTP
 - Hyper Text Transfer Protocol
