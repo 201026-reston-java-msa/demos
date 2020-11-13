@@ -16,7 +16,7 @@
 * Servlets
 * JavaScript
 
-# HTTP
+## HTTP
 - Hyper Text Transfer Protocol
 - Primary networking protocol used for client-server communication
   - The internet (world-wide-web)
@@ -36,7 +36,7 @@
   more about them in a moment, but we have seen examples such as 200 OK, and 201 CREATED *see the **HTTP Status Codes** listed below***
 - HTTP responses can also have a body. If a GET request was performed, generally,the response is stored in the body.
 
-## HTTP Status Codes
+### HTTP Status Codes
 - There are 5 different sets of status codes
   1. 1XX Series, informational messages
   2. 2XX Series, requests were successful
@@ -57,11 +57,11 @@
     - 502 Bad Gateway
     - 504 Gateway timeout
 
-## Sessions
+## Session Management
 - The practice of storing information about the user in the server in order
   to improve user experience
 
-Why do sessions matter?
+**Why do sessions matter**?
 - User Experience: Saving session information locally prevents
   needless hits to your database, which improves performance and allows you
   to personalize a user's experience.
@@ -163,7 +163,7 @@ Why do sessions matter?
 - Sending a JSON object via mapping with Jackson
 - Front controller design pattern
 
-### Client/Server Architecture
+## Client/Server Architecture
 - A Client and a Server establish a connection according to a set of rules called a protocol. 
 - [**HTTP**](https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview) is a protocol which allows the fetching of resources, such as HTML documents. 
     - It is the foundation of any data exchange on the Web and it is a **client-server protocol**, which means requests are initiated by the recipient, usually the Web browser (client).
@@ -227,7 +227,7 @@ Why do sessions matter?
   - Bootstrap (current version is 4)
     - Mobile-first responsive CSS-framework
 
-### JavaScript Language Fundamentals
+## JavaScript Language Fundamentals
 
 1.  What is JavaScript? What do we use it for?
 2.  Can we run JavaScript in a web browser, on a server, or both?
