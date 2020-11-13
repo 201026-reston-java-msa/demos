@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Manipulation</title>
+</head>
+<body>
+    <p>
+        DOM stands Document Object Model - it is a node-tree representation of all the elements within our HTML page. <br />
+        It allows us to identify and access these elements and then use JS functions to apply behavior to them (that's the manipulation part).
+    </p> 
+    <br />
+    <p>
+        There are various ways to get an element:
+        <ul>
+            <li>id - (using getElementById function)</li>
+            <li>name - (using getElementByName function)</li>
+            <li>class - (using getElementByClass function)</li>
+            <li>There are others too...</li> 
+        </ul>
+    </p>
+
+    <p>Example 1</p>
+    <p id=id1>This paragraph has an id</p>
+    <script>
+        let p1 = document.getElementById('id1')
+        console.log(p1)
+        p1.innerHTML = "This paragraph has been modified"
+    </script>
+
+    <p class='c1 c2'>This paragraph has 2 classes (c1 and c2)</p>
+    <script>
+        let p2 = document.getElementsByClassName('c2');
+        console.log(p2)
+    </script>
+
+    <script>
+        p1.innerHTML =  "something else again"
+        p1.style.color = 'rebeccapurple'
+        p1.style.backgroundColor = 'yellow'
+        p2[0].style.color = 'blue' // brackets are returning the array of elements
+    </script>
+
+    <div id="parentDiv">This is a parent div</div>
+    <script>
+        let childDiv = document.createElement("div")
+        childDiv.innerHTML = "Look a new child div!"
+
+        let parentDiv = document.getElementById("parentDiv")
+        parentDiv.appendChild(childDiv)
+        parentDiv.removeChild(childDiv)
+    </script>
+
+    <h2>Events</h2>
+    <!-- Event listeners
+        * onclick
+        * onmouseover
+        * onload
+        * onkeydown (and MANY more)
+        ! -->
+    <button id="funcbutton" onclick="someFunc()">Click me!</button>
+    <script>
+        function someFunc() {
+            let button = document.getElementById("funcbutton");
+
+            if (button.style.fontWeight === "bold") {
+                button.style.fontWeight = "400";
+                button.style.innerHTML = "Click me!"
+            } else {
+                button.setAttribute("style", "font-weight: bold");
+                button.innerHTML = "BOLD!";
+            }
+        }
+    </script>
+
+    <!-- There are 2 primary ways that we can create event listeners: 
+    1. setAttribute to aa function () (ABOVE ^)
+    2. addEventListener (BELOW )-->
+
+    <h2>Adding Event Listeners</h2>
+    <button id="otherButton">Random Button!</button>
+
+    <script>
+        let otherButton = document.getElementById("otherButton");
+
+        otherButton.addEventListener("mouseover", () => {
+            if (otherButton.style.color != "hotpink") {
+                otherButton.style.color = "hotpink";
+            } else {
+                otherButton.style.color = "black";
+            }
+        });
+
+        // The syntax for adding an event listener in JS is as follows:
+        // elementVariable.addEventListener("eventname", callbackOrANonymousFunction)
+    </script> 
+
+</body>
+</html>
