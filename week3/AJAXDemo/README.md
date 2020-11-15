@@ -1,7 +1,7 @@
 # AJAX Tutorial
 This tutorial will introduce you to the basics of AJAX (Asynchronous JavaScript And XML) by building a basic web page that asks the user to input a number.  When the user clicks a button, AJAX will asynchronously request a pokemon that corresponds with that number by exposing the [pokeAPI](https://pokeapi.co/).
 
-> This is an example of exposing a REST API.
+> This is an example of consuming a REST API.
 
 AJAX stands for **A**synchronous **J**avaScript **A** nd **X**ML. AJAX allows web pages to be updated asynchronously by exchanging data with a web server behind the scenes. This means that it is possible to update parts of a web page, without reloading the whole page. This tutorial will show you how to create a webpage that does the following:
 
