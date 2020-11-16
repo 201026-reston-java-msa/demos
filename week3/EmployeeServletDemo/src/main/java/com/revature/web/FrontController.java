@@ -23,19 +23,17 @@ public class FrontController extends HttpServlet {
 		case "login":
 			RequestHelper.processLogin(request, response);
 			break;
-//		case "logout":
-//			RequestHelper.processLogout(request, response);
-//			break;
-//		case "employees":
-//			RequestHelper.processEmployees(request, response);
-//			break;
-			
-			// ^ I will make these methods later...
+		case "logout":
+			RequestHelper.processLogout(request, response);
+			break;
+		case "employees":
+			RequestHelper.processEmployees(request, response);
+			break;
 		}
 	}
 	
 
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {		
 		doPost(request, response);
 	}
 

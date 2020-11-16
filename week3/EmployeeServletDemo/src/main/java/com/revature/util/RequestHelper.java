@@ -3,6 +3,8 @@ package com.revature.util;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.ArrayList;
+import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -61,14 +63,36 @@ public class RequestHelper {
 			res.setContentType("application/json");
 			res.setStatus(204); // this means that the connection was successful but no user found!
 		}
-		
-		
-		
 	}
 
+	public static void processLogout(HttpServletRequest req, HttpServletResponse res) throws IOException {
+		HttpSession session = req.getSession(false);
+		
+		if (session != null) {
+			String username = (String) session.getAttribute("username");
+			log.info(username + " has logged out.");
+			session.invalidate();
+		}
+		
+		res.setStatus(200);
+	}
 	
+	public static void processEmployees(HttpServletRequest req, HttpServletResponse res) throws IOException {
+		res.setContentType("application/json");
+		
+		List<Employee> all = EmployeeService.findAll();
+		List<EmployeeDTO> allDTO = new ArrayList<>();
+		
+		for (Employee e : all) {
+			allDTO.add(EmployeeService.convertToDTO(e));
+		}
+		
+		String json = om.writeValueAsString(allDTO);
+		
+		PrintWriter pw = res.getWriter();
+		pw.println(json);
 	
-	
+	}
 	
 	
 	
