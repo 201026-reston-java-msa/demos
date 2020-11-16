@@ -3,6 +3,7 @@ package com.revature.services;
 import java.util.List;
 
 import com.revature.models.Employee;
+import com.revature.models.EmployeeDTO;
 import com.revature.repositories.EmployeeDAOImpl;
 
 public class EmployeeService {
@@ -45,7 +46,15 @@ public class EmployeeService {
 		}
 	}
 	
-	
+	public static EmployeeDTO convertToDTO(Employee e) {
+		return new EmployeeDTO(e.getId(),
+				
+				e.getFirstName(),
+				e.getLastName(),
+				e.getUsername(),
+				e.getPassword(),
+				e.getHireDate().toString());
+	}
 	
 	
 	
