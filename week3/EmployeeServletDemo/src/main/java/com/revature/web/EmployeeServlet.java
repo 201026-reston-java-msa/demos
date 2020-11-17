@@ -30,12 +30,7 @@ public class EmployeeServlet extends HttpServlet {
 		List<EmployeeDTO> allDTO = new ArrayList<>();
 		
 		for(Employee e : all) {
-			allDTO.add(new EmployeeDTO(e.getId(),
-					e.getFirstName(),
-					e.getLastName(),
-					e.getUsername(),
-					e.getPassword(),
-					e.getHireDate().toString()));
+			allDTO.add(EmployeeService.convertToDTO(e));
 		}
 		
 		String json = om.writeValueAsString(allDTO);

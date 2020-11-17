@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Example</title>
+    <!--I will include the link to the jQuery library-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- Here we're adding a bit of CSS-->
+    <style>
+        .fancy {
+            font-size: 100px;
+            color: green;
+        }
+    </style>
+</head>
+<body>
+
+<div id="empty-div"></div>
+
+
+<script>
+
+    // Thanks to jQuery, we can use the $ selector which gives us a wealth of new methods for selecting
+    // and manipulating HTML
+
+    // jQuery has a .html metho which allows us to instantly select and change the contents of our
+    // empty div
+
+    $("#empty-div").html("<h1>Hello friends!</h1>");
+
+    // If we need each line to be its own div, we could just as easily create a new div.
+    var newDiv = $("<div>");
+    newDiv.text("JQuery makes life easy.")
+
+    // We can also use the .append method to append a new line
+    $("#empty-div").append("A pleasure to meet you!");
+
+    // we can append a varible using jQuery's $ selector
+    $("#empty-div").append(newDiv);
+
+    // NOTICE THE DIFFERENCE
+    // ---------------------
+    // $("#empty-div")    <--- FIND a DOM node with the ID empty-div
+    // $("<div>")         <--- CREATE  a new DIV
+
+    // If we need to apply some CSS, we can quickly do so, using the jQuery ".attr" method.
+    newDiv.attr("class", "fancy");
+
+</script>
+</body>
+
+
+</html>
