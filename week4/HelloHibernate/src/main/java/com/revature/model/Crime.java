@@ -1,15 +1,19 @@
 package com.revature.model;
 
 import javax.persistence.Column;
+import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
+@Entity
+@Table(name="Crime")
 public class Crime {
 	
 	@Id
 	@Column(name="crime_id")
-	@GeneratedValue(strategy=GenerationType.AUTO)
+	@GeneratedValue(strategy=GenerationType.AUTO) // generate a serial value
 	private int crimeId;
 	
 	@Column(name="crime_name", unique=true, nullable=false)

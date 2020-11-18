@@ -43,6 +43,8 @@ session needed to communicate with our database -->
 	<property name="hibernate.hbm2ddl.auto">create</property>
 	<!-- CREATE, VALIDATE, UPDATE, NONE -->
 	
+	<!-- Validate is indeed the setting we want for production  -->
+	
 	<!-- CREATE: drops all existing tables and objects with the names provided in annotations, and then Hibernate will create the schema for us 
 	(NOT PARTICULARLY GREAT FOR PRODUCTION, but useful for development)-->
 	
@@ -52,7 +54,9 @@ session needed to communicate with our database -->
 	
 	<!--  NONE: it means that Hibernate will NOT do anything, or add to your schema -->
 		
-	<!-- <mapping class="com.revature.model.MyClass"/> -->	
+	<mapping class="com.revature.model.SuperVillain"/>	
+	<mapping class="com.revature.model.Crime"/>
+	<mapping class="com.revature.model.SuperPrisons"/>
 		
 	</session-factory>
 </hibernate-configuration>

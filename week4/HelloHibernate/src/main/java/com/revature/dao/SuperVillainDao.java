@@ -9,6 +9,7 @@ package com.revature.dao;
  * 
  * 
  * There are 3 different ways to create complex queries in Hibernate:
+ * 
  * 1. HQL - Hibernate Query Language
  * 2. Criteria API
  * 3. Native SQL 
@@ -35,7 +36,7 @@ public class SuperVillainDao {
 		Transaction tx = ses.beginTransaction();  // perform an operation on DB
 		
 		ses.save(villain); // use the save() session method to perform an insert operation
-		tx.commit(); // commit the transaction by utilizing the methods from theTransaction interface
+		tx.commit(); // commit the transaction by utilizing the methods from the Transaction interface
 	}
 
 	public void update (SuperVillain villain) {
@@ -55,6 +56,7 @@ public class SuperVillainDao {
 	
 	public SuperVillain selectByName(String name) {
 		Session ses = HibernateUtil.getSession();
+		
 		// HQL -- Hibernate Query Language
 		// creates a complex query using a combination of Native SQL & OOP
 		// HQL targets Java Objects, NOT SQL tables
@@ -86,24 +88,8 @@ public class SuperVillainDao {
 		// This is an example of HQL --> HQL will check for the class name (of our java models)
 		List<SuperVillain> villList = ses.createQuery("from SuperVillain", SuperVillain.class).list();
 		// HQL is returning all instances of the SuperVillain class
-		// no nneedfor transaction object here We are just querying Data
+		// no needfor transaction object here We are just querying Data, NOT commiting any changes to our database, hence it's not a transaction
 		return villList;
 	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 	
 }

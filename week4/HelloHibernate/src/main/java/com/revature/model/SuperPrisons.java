@@ -4,12 +4,16 @@ import java.util.ArrayList;
 import java.util.List;
 
 import javax.persistence.Column;
+import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
+import javax.persistence.Table;
 
+@Entity
+@Table(name="Super_Prison")
 public class SuperPrisons {
 	
 	@Id
@@ -45,6 +49,12 @@ public class SuperPrisons {
 		this.spName = spName;
 		this.location = location;
 		this.villList = villList;
+	}
+	
+	public SuperPrisons(String spName, String location) {
+		super();
+		this.spName = spName;
+		this.location = location;
 	}
 
 	public int getSpId() {
