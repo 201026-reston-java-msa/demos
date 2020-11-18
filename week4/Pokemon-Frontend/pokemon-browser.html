@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <!--navigation-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="index.html">Pokemon Frontend</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" href="pokemon-browser.html">See Pokemon <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Features</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Pricing</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+      <!-- Create a JumboTron here-->
+      <div class="jumbotron">
+        <div class="container">
+            <div class="col-9">
+                <h1>This is Demo Page</h1>
+            </div>
+        </div>
+      </div>
+
+
+      <!--Create Content here-->
+      <main class="container">
+        <div class="row">
+            <div class="col-md-2">
+                <img id="sprite1" class="img-fluid" alt="sprite">
+            </div>
+            <div class="col-md-2">
+                <img id="sprite2" class="img-fluid" alt="sprite">
+            </div>
+            <div class="col-md-2">
+                <img id="sprite3" class="img-fluid" alt="sprite">
+            </div>
+            <div class="col-md-2">
+                <img id="sprite4" class="img-fluid" alt="sprite">
+            </div>
+            <div class="col-md-2">
+                <img id="sprite5" class="img-fluid" alt="sprite">
+            </div>
+            <div class="col-md-2">
+                <img id="sprite6" class="img-fluid" alt="sprite">
+            </div>
+
+            <div class="row">
+                <div class="col-6">
+                    <button id="scroll-left" class="btn btn-primary"></button>
+                </div>
+                <div class="col-6">
+                    <button id="scroll-right" class="btn btn-primary"></button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <h3>Info</h3>
+                    <div id="pokemon-info">
+                    </div>
+                </div>
+            </div>
+        </div>
+      </main> 
+      <script src="pokemon-browser.js"></script> 
+</body>
+</html>
