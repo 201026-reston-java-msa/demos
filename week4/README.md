@@ -55,7 +55,7 @@
 
 ---
 
-# Hibernate
+# Hibernate Study Guide
 The Hibernate framework is a ORM (Object-Relational Mapping) implementation which is built around JDBC.
 
 ORM refers to the long-standing problem of setting up a relationship between a program's objects and rows in a SQL table.
