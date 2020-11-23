@@ -29,10 +29,18 @@
 24.  What is Transactional Write Behind?
 25.  Explain how transaction propagation works
 
+# Docker QC Questions:
+1. What is virtualization?
+2. What is containerization? How does it differ from virtualization?
+3. What is Docker?
+4. What is an Image? How does it relate to a Docker Container?
+5. Can you list some Docker commands?
+
 # DevOps QC Questions
 
 1.  What is DevOps? What is the goal of various DevOps processes?
-2.  Explain CI/CD.
+2.  **Explain CI/CD**. (Continuous Integration/Continuous Delivery)
+ - Jenkins is the automation server that we use for these 2 stages of development.  Continuous *Deployment* comes after this.
 3.  What tools have you used to achieve CI/CD? Explain how you’ve setup and used them
 4.  What is a DevOps pipeline? Explain the steps to setting one up
 5.  What is SonarQube / SonarCloud? Explain some of the features of it - 
