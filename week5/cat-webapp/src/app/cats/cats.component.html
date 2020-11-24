@@ -1,19 +1,30 @@
-<h2>{{cat.name | uppercase}} Details</h2>
 <!--Pipes are used to format strings, currency, and other forms of
 data in HTML.  Here we use an UpperCase Pipe -->
+<h2>All of the Cats</h2>
+<ul class="cats">
+    <!--*ngFor allows us to iterate through a collection within our application
+    and perform an operation on each element -->
+    <li *ngFor="let cat of cats" [class.selected]="cat === selectedCat" (click)="onSelect(cat)">
+        <!--The above is an example of event-binding syntax-->
+        <span class="box">{{cat.id}}</span> {{cat.name}}
+    </li>
+</ul>
 
-<!--ngModel is Angular's 2-way data binding syntax-->
-<div>
-    <label> name:
-        <input [(ngModel)]="cat.name" placeholder="enter a name"/>
-    </label>
+
+<div *ngIf="selectedCat">
+    <!--ngModel is Angular's 2-way data binding syntax-->
+    <h2>{{selectedCat.name | uppercase}} Details</h2>
+    <div><span>id: </span>{{selectedCat.id}}</div>
+    <div>
+        <label> name:
+            <input [(ngModel)]="selectedCat.name" placeholder="enter a name" />
+        </label>
+    </div>
+
 </div>
 
-<div><span>id: </span>{{cat.id}}</div>
-<div><span>name: </span>{{cat.name}}</div>
 <!--This will display whatever property I've set equal to cat
 in my cats.component.ts file-->
 
 <!--We have updated the binding in the template to announce both
 the name and id-->
-

@@ -1,6 +1,7 @@
+import { Cat } from './../cat';
+import { CATS } from './../mock-cats';
 import { Component, OnInit } from '@angular/core';
 // We must import the Cat interface inorder to set it as a property
-import { Cat } from '../cat';
 
 // The CLI generated 3 important metadata properties
 @Component({
@@ -10,10 +11,10 @@ import { Cat } from '../cat';
 })
 export class CatsComponent implements OnInit {
 
-  cat: Cat = {
-    id: 1,
-    name: 'Winston'
-  }
+  cats = CATS;
+  selectedCat: Cat; // this property is not assigned a value when we inititalize...
+
+  // we will expose this array for binding 
 
   constructor() { }
 
@@ -23,4 +24,9 @@ export class CatsComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  onSelect(cat: Cat): void {
+    this.selectedCat = cat;
+  }
 }
+
+

@@ -38,3 +38,11 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 - We used two-way databinding with the ngModel directive 
 - We touched upon imports in the AppModule
 - We imported the FormsModule in the AppModule so that Angular would recognize and apply the ngModel directive
+
+## What we did after 
+- We displayed a list of cats
+- The user can select a cat and see that cat's details thanks to 
+the use of the ngFor and ngIf directives
+    - Directives add extensive functionality to manipulating our DOM and iterating over elements
+- You can use *ngFor to display a list
+- You can use *ngIf to to conditionally include or excluse a block of HTML
