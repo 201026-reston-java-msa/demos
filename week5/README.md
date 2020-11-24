@@ -45,6 +45,43 @@ a framework is a simplification of a language and/or design pattern to a foundat
 - `ng` is the Angular command for the CLI
 - to install Angualar, we call `npm install -g @angular/cli`
 
+## Angular Components
+Components are the most basic block of an Angular app.  An Angular App contains a tree of Angular Components
+- Components are essentially classes that interact with the .html file of the component which gets displayed to a browser
+- The file structure of a component consists of the following:
+    1. mycmp.component.css -- Private styling sheet
+    2. mycmp.component.html -- HTML Template
+    3. mycmp.component.ts -- Here we define the module, its properties, lifehooks, etc.
+    4. mycmp.component.spec.ts -- unit testing file
+
+- To create a component run: `ng g c mycomponent`
+- As soon as we create a component, all changes are added to our `app.module.ts` file
+- As soon as the component is created, ngOnInit method is created
+    - this method is called by default when the class is executed.
+- It also has a constructor
+- the `app` component is the **Parent component** and any new components that we create and the **Child components**
+
+### Interpolation
+- Interpolation allows you to incorporate proerties and embed them into an HTML file with {{}};
+
+## Data-Binding
+- Data binding is a technique to link your data to your view layer.
+- By binding a variable, you are telling the framework (in this case, Angular) to watch it for changes.
+    - If changes are detected, the framework will update the view.
+
+#### One-Way Binding 
+- One-way binding will bind the data from the component to the view (DOM) or from the view to the component.
+- This is unidirectional (we change one thing)
+- **For example**: *Interpolation Binding* -> Interpolation refers to binding expressiong into marked up language (we turned the property of the `app component` into HTML text (as the title like so `{{title}}`))
+- **Class Binding** Class binding is used to set a class property of a view element
+
+#### Two-Way Data Binding
+- 2-way data binding in Angular will help users to exchange data from the component to view, and from view to component (bidirectional)
+- 2-way databinding is a combo of Property Binding and Event Binding
+- 2-way binding can be achieved with the `[(ngModel)]` directive...think banana in a box!
+
+
+
 
 
 
