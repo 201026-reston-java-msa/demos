@@ -1,7 +1,7 @@
 # Angular
 
-#### What's a framework?
-a framework is a simplification of a language and/or design pattern to a foundation for developers to use to build apps with ease.
+#### But first, What's a framework?
+A framework is a platform for developing software applications. It provides a foundation on which software developers can build programs for a specific platform. A framework may also include code libraries, a compiler, and other programs used in the software development process.
 
 ## What's Angular?
 - It is an open-source TypScript-based frontend framework developed by Google (in 2010).
@@ -49,7 +49,7 @@ a framework is a simplification of a language and/or design pattern to a foundat
 Components are the most basic block of an Angular app.  An Angular App contains a tree of Angular Components
 - Components are essentially classes that interact with the .html file of the component which gets displayed to a browser
 - The file structure of a component consists of the following:
-    1. mycmp.component.css -- Private styling sheet
+    1. mycmp.component.css -- the component's private styling sheet
     2. mycmp.component.html -- HTML Template
     3. mycmp.component.ts -- Here we define the module, its properties, lifehooks, etc.
     4. mycmp.component.spec.ts -- unit testing file
@@ -61,9 +61,6 @@ Components are the most basic block of an Angular app.  An Angular App contains 
 - It also has a constructor
 - the `app` component is the **Parent component** and any new components that we create and the **Child components**
 
-### Interpolation
-- Interpolation allows you to incorporate proerties and embed them into an HTML file with {{}};
-
 ## Data-Binding
 - Data binding is a technique to link your data to your view layer.
 - By binding a variable, you are telling the framework (in this case, Angular) to watch it for changes.
@@ -72,7 +69,8 @@ Components are the most basic block of an Angular app.  An Angular App contains 
 #### One-Way Binding 
 - One-way binding will bind the data from the component to the view (DOM) or from the view to the component.
 - This is unidirectional (we change one thing)
-- **For example**: *Interpolation Binding* -> Interpolation refers to binding expressiong into marked up language (we turned the property of the `app component` into HTML text (as the title like so `{{title}}`))
+- **For example**: *Interpolation* -> Interpolation refers to binding expressiong into marked up language (we turned the property of the `app component` into HTML text (as the title like so `{{title}}`)
+    - Interpolation allows you to incorporate properties and embed them into an HTML file with {{}};
 - **Class Binding** Class binding is used to set a class property of a view element
 
 #### Two-Way Data Binding
@@ -100,12 +98,29 @@ Directives change the appearence behavior or layout of the DOM (Document Object 
 #### Attribute Directives
 - These change the appearence or *behavior* of a particular element, component, or another directive.
 - We typically build these ourselves
+##### Example
+The `@Input` directive is an example of and Attribute Directive.
+- Decorator that marks a class field as an input property and supplies configuration metadata. The input property is bound to a DOM property in the template
 
 ### @Decorators
 *These are similar to the purpose of annotations in Java*
 - The **@Component** decorator tells Angular that we want a class to be treated as a component
     - It provides the metadata for how this particular Component Class should be processed, used, and instantiated.
+- The **@NgModule** decorator takes a metadata object that describes how to compile a component's template and how to create an injector at runtime.
+    - An `NgModule` is a class marked by the **@NgModule** decorator.
 
+---
+
+# Dependency Injection
+**Dependency injection** is a technique in which an object receives other objects that it depends on. These other objects are called dependencies.
+- The "injection" refers to the passing of a dependency (a service) into the object that would use it.
+- Dependencies are services or objects that a class needs to perform its function.
+
+### Services
+Angular services are singleton objects that get instantiated only once during the lifetime of an application.
+- Services are a great way to share information among classes that don't know each other. 
+- Services can depend on other services.
+- The `@Injectible` decorator defines this as a provider, and its metadata specifies that it will be provided at the root level. 
 
 
 
