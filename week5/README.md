@@ -80,7 +80,31 @@ Components are the most basic block of an Angular app.  An Angular App contains 
 - 2-way databinding is a combo of Property Binding and Event Binding
 - 2-way binding can be achieved with the `[(ngModel)]` directive...think banana in a box!
 
+## package.json
+- Think of the pom.xml file within your Angular project
+- The package.json file is stored in the root of your application
+- This file is used to give information to npm (node package manager) and identify all the project's dependencies and handle them.
 
+## Webpack
+- The angular CLI uses a tool called **webpack** which is a build automation tool.
+- it minifies all of our JS scripts, HTML and CSS files and bundles them together
+- The webpack traverses our application looking for `import` statements and builds a dependency graph
+
+## Directives
+Directives change the appearence behavior or layout of the DOM (Document Object Model)
+
+#### Structural Directives
+- These change the DOM layout by adding/removing DOm elements
+- `ngFor` and `ngIf`
+
+#### Attribute Directives
+- These change the appearence or *behavior* of a particular element, component, or another directive.
+- We typically build these ourselves
+
+### @Decorators
+*These are similar to the purpose of annotations in Java*
+- The **@Component** decorator tells Angular that we want a class to be treated as a component
+    - It provides the metadata for how this particular Component Class should be processed, used, and instantiated.
 
 
 

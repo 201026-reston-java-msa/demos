@@ -1,3 +1,4 @@
+import { CatService } from './../cat.service';
 import { Cat } from './../cat';
 import { CATS } from './../mock-cats';
 import { Component, OnInit } from '@angular/core';
@@ -16,17 +17,26 @@ export class CatsComponent implements OnInit {
 
   // we will expose this array for binding 
 
-  constructor() { }
+  constructor(private catService: CatService) { }
 
   // This is a lifecycle hook
   // Ng calls nG onInit() shortly after creating a component
   // we put initailization logic in here...
   ngOnInit(): void {
+    this.getCats();
   }
 
   onSelect(cat: Cat): void {
     this.selectedCat = cat;
   }
+
+  getCats(): void {
+    this.catService.getCats()
+    .subscribe(cats => this.cats = cats);
+  }
+  // The subscribe method is going to pass the emitted array
+  // to the callback which assigns this array as a property 
+  //of our component
 }
 
 

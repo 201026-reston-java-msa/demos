@@ -10,21 +10,10 @@ data in HTML.  Here we use an UpperCase Pipe -->
     </li>
 </ul>
 
+<!--This is propery-->
+<!-- We make the cat property -->
+<app-cat-details [cat]="selectedCat"></app-cat-details>
 
-<div *ngIf="selectedCat">
-    <!--ngModel is Angular's 2-way data binding syntax-->
-    <h2>{{selectedCat.name | uppercase}} Details</h2>
-    <div><span>id: </span>{{selectedCat.id}}</div>
-    <div>
-        <label> name:
-            <input [(ngModel)]="selectedCat.name" placeholder="enter a name" />
-        </label>
-    </div>
-
-</div>
-
-<!--This will display whatever property I've set equal to cat
-in my cats.component.ts file-->
-
-<!--We have updated the binding in the template to announce both
-the name and id-->
+<!--Here we will use the cat-details component selector
+and then property binding to give our parent component control over
+the child component-->
