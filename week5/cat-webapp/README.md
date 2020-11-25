@@ -46,3 +46,21 @@ the use of the ngFor and ngIf directives
     - Directives add extensive functionality to manipulating our DOM and iterating over elements
 - You can use *ngFor to display a list
 - You can use *ngIf to to conditionally include or excluse a block of HTML
+
+### What we did with Services
+- We refactored data access to the CatService Class (through the use of access modifiers and adding the Service to the constructor).
+- We registered the CatService 
+    > Instead of using Constructor Injection in Angular, you can also
+    create variables like:
+    ```
+    private ds = new DataService();
+    ```
+- We used Angular Dependency Injection to inject it into the component
+- We gave the CatService a `getCats()` method which was an asynchronous signature
+- We used `Observable` from the RxJS Library
+    - RxJS is Reactive Extensions for JavaScript: a library for reactive programming using observables to compose asynchronous code.
+- We used RxJS `of()` function to return an observable of our mock cats DB 
+    - The actual observable that we returned was `Observable<Cat[]>`
+- We used the ngOnInit Lifecycle hook to call the CatService `getCats()` method.
+- We created a `MessageService` for loosely-coupled communication between classes.
+- 

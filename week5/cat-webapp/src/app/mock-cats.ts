@@ -10,5 +10,8 @@ export const CATS: Cat[] = [
     { id: 17, name: 'Clancy'},
     { id: 18, name: 'Mr. Pebbles'},
     { id: 19, name: 'Spot'},
-    { id: 20, name: 'Eduardo'}
+    { id: 20, name: 'Eduardo'},
+    { id: 21, name: 'Isa'},
+    { id: 22, name: 'Sophia'},
+    { id: 23, name: 'Azhya'}
 ]

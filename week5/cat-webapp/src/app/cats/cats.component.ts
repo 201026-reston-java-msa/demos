@@ -1,7 +1,9 @@
+import { MessageService } from './../message.service';
 import { CatService } from './../cat.service';
 import { Cat } from './../cat';
 import { CATS } from './../mock-cats';
 import { Component, OnInit } from '@angular/core';
+
 // We must import the Cat interface inorder to set it as a property
 
 // The CLI generated 3 important metadata properties
@@ -12,12 +14,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CatsComponent implements OnInit {
 
-  cats = CATS;
+  cats: Cat[]; // this property is assigned thanks to our getCats() method ngOnInit
   selectedCat: Cat; // this property is not assigned a value when we inititalize...
 
   // we will expose this array for binding 
 
-  constructor(private catService: CatService) { }
+  constructor(private catService: CatService, private messageService: MessageService) { }
 
   // This is a lifecycle hook
   // Ng calls nG onInit() shortly after creating a component
@@ -28,7 +30,13 @@ export class CatsComponent implements OnInit {
 
   onSelect(cat: Cat): void {
     this.selectedCat = cat;
+    this.messageService.add(`CatsComponent: Selected cat id=${cat.id}`);
   }
+
+  // This is synchronous
+  // getCats(): void {
+  //   this.cats = this.catService.getCats();
+  // }
 
   getCats(): void {
     this.catService.getCats()

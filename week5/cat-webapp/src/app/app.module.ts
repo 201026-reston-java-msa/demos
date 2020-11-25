@@ -6,12 +6,14 @@ import { AppComponent } from './app.component';
 import { CatsComponent } from './cats/cats.component';
 import { FormsModule } from '@angular/forms';
 import { CatDetailsComponent } from './cat-details/cat-details.component';
+import { MessagesComponent } from './messages/messages.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CatsComponent,
-    CatDetailsComponent
+    CatDetailsComponent,
+    MessagesComponent
   ],
   imports: [
     BrowserModule,

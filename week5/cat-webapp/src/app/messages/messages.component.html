@@ -1,0 +1,12 @@
+<!--We will use an *ngIf directive to only show messages IF 
+there are indeed messages in our messageService.-->
+<div *ngIf="messageService.messages.length">
+
+    <h2>Messages</h2>
+    <button class="clear"
+        (click)="messageService.clear()">clear</button>
+<!--This ^^^ is event binding-->
+    <div *ngFor='let message of messageService.messages'>{{message}}</div>
+    <!--We use an *ngFor to present the list of messages
+    in repeated div elements via interpolation-->
+</div>
