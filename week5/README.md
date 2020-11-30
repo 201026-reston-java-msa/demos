@@ -102,12 +102,22 @@ Directives change the appearence behavior or layout of the DOM (Document Object 
 The `@Input` directive is an example of and Attribute Directive.
 - Decorator that marks a class field as an input property and supplies configuration metadata. The input property is bound to a DOM property in the template
 
-### @Decorators
+## @Decorators
 *These are similar to the purpose of annotations in Java*
 - The **@Component** decorator tells Angular that we want a class to be treated as a component
     - It provides the metadata for how this particular Component Class should be processed, used, and instantiated.
 - The **@NgModule** decorator takes a metadata object that describes how to compile a component's template and how to create an injector at runtime.
     - An `NgModule` is a class marked by the **@NgModule** decorator.
+    
+### `AppModule`: The Root Module
+An Angular **module class** describes how the application parts fit together. Every application has at least one Angular module, the root module that you bootstrap to launch the application. You can call it anything you want. The conventional name is `AppModule`.
+
+#### `@NgModule` Decorator
+The `@NgModule` decorator identifies AppModule as an Angular module class (also called an `NgModule` class). 
+- `@NgModule` takes a metadata object that tells Angular how to compile and launch the application.
+    - `imports` — the BrowserModule that this and every application needs to run in a browser.
+    - `declarations` — the application's lone component, which is also ...
+    - `bootstrap` — the root component that Angular creates and inserts into the index.html host web page.
 
 ---
 
@@ -129,14 +139,4 @@ Angular services are singleton objects that get instantiated only once during th
 
 The **Observer Pattern** is a software design pattern in which an object, called the subject, maintains a list of its dependents, called observers, and notifies them automatically of state changes. 
     - This pattern is similar (but not identical) to the [publish/subscribe](https://en.wikipedia.org/wiki/Publish%E2%80%93subscribe_pattern) design pattern.
-
-## `AppModule`: The Root Module
-An Angular **module class** describes how the application parts fit together. Every application has at least one Angular module, the root module that you bootstrap to launch the application. You can call it anything you want. The conventional name is `AppModule`.
-
-### `@NgModule` Decorator
-The `@NgModule` decorator identifies AppModule as an Angular module class (also called an `NgModule` class). 
-- `@NgModule` takes a metadata object that tells Angular how to compile and launch the application.
-    - `imports` — the BrowserModule that this and every application needs to run in a browser.
-    - `declarations` — the application's lone component, which is also ...
-    - `bootstrap` — the root component that Angular creates and inserts into the index.html host web page.
 
