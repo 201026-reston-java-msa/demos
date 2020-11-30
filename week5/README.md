@@ -122,5 +122,13 @@ Angular services are singleton objects that get instantiated only once during th
 - Services can depend on other services.
 - The `@Injectible` decorator defines this as a provider, and its metadata specifies that it will be provided at the root level. 
 
+---
+
+## Using *Observables* to pass values
+**Observables** provide support for passing messages between parts of your application. They are used frequently in Angular and are the recommended technique for event handling, asynchronous programming, and handling multiple values.
+
+The **Observer Pattern** is a software design pattern in which an object, called the subject, maintains a list of its dependents, called observers, and notifies them automatically of state changes. 
+    - This pattern is similar (but not identical) to the [publish/subscribe](https://en.wikipedia.org/wiki/Publish%E2%80%93subscribe_pattern) design pattern.
+
 
 
