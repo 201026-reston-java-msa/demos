@@ -24,7 +24,7 @@ A framework is a platform for developing software applications. It provides a fo
 - Handle **Dependency Injection** through the use of **Services**
 
 ## TypeScript
-- it is open-source and inveted by Microsoft
+- it is open-source and invented & maintained by **Microsoft**
 - it is a super-set of JS
 - it is **strictly typed**
 - Browsers themselves cannot interpret TS, so it must be **transpiled into JS**.
@@ -45,14 +45,24 @@ A framework is a platform for developing software applications. It provides a fo
 - `ng` is the Angular command for the CLI
 - to install Angualar, we call `npm install -g @angular/cli`
 
+## Webpack
+- The angular CLI uses a tool called **webpack** which is a build automation tool.
+- it minifies all of our JS scripts, HTML and CSS files and bundles them together
+- The webpack traverses our application looking for `import` statements and builds a dependency graph
+
+## `package.json`
+- Think of the pom.xml file within your Angular project
+- The package.json file is stored in the root of your application
+- This file is used to give information to npm (node package manager) and identify all the project's dependencies and handle them.
+
 ## Angular Components
 Components are the most basic block of an Angular app.  An Angular App contains a tree of Angular Components
 - Components are essentially classes that interact with the .html file of the component which gets displayed to a browser
 - The file structure of a component consists of the following:
-    1. mycmp.component.css -- the component's private styling sheet
-    2. mycmp.component.html -- HTML Template
-    3. mycmp.component.ts -- Here we define the module, its properties, lifehooks, etc.
-    4. mycmp.component.spec.ts -- unit testing file
+    1. `mycmp.component.css` -- the component's private styling sheet
+    2. `mycmp.component.html` -- HTML Template
+    3. `mycmp.component.ts` -- Here we define the module, its properties, lifehooks, etc.
+    4. `mycmp.component.spec.ts` -- unit testing file
 
 - To create a component run: `ng g c mycomponent`
 - As soon as we create a component, all changes are added to our `app.module.ts` file
@@ -77,16 +87,6 @@ Components are the most basic block of an Angular app.  An Angular App contains 
 - 2-way data binding in Angular will help users to exchange data from the component to view, and from view to component (bidirectional)
 - 2-way databinding is a combo of Property Binding and Event Binding
 - 2-way binding can be achieved with the `[(ngModel)]` directive...think banana in a box!
-
-## package.json
-- Think of the pom.xml file within your Angular project
-- The package.json file is stored in the root of your application
-- This file is used to give information to npm (node package manager) and identify all the project's dependencies and handle them.
-
-## Webpack
-- The angular CLI uses a tool called **webpack** which is a build automation tool.
-- it minifies all of our JS scripts, HTML and CSS files and bundles them together
-- The webpack traverses our application looking for `import` statements and builds a dependency graph
 
 ## Directives
 Directives change the appearence behavior or layout of the DOM (Document Object Model)
