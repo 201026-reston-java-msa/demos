@@ -63,4 +63,8 @@ the use of the ngFor and ngIf directives
     - The actual observable that we returned was `Observable<Cat[]>`
 - We used the ngOnInit Lifecycle hook to call the CatService `getCats()` method.
 - We created a `MessageService` for loosely-coupled communication between classes.
-- 
+
+## What we did with Routing
+- We edited the Angular router (which was created for us by the Angular CLI, but you will have the chance to create one from scratch)
+- We turned our AppComponent into solely a **Navigation Shell** with the `<a>` links and the `<router-outlet>` directive.
+- We shared the `CatService` among *multiple* components.

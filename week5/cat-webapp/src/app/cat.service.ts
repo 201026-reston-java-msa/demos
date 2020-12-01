@@ -3,44 +3,84 @@ import { Cat } from './cat';
 import { CATS } from './mock-cats';
 import { Injectable } from '@angular/core';
 import { Observable, of }  from 'rxjs';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { catchError, map, tap } from 'rxjs/operators';
 // RxJS is a library for composing asynchronous and event-based programs
 
 // This decorator allows this service to be used (or INJECTED)
 @Injectable({
   providedIn: 'root'
 })
+
+// inject HttpClient in the constructor
 export class CatService {
+
+
+  // this is linking to :base/:collectionName
+  // in this case, our BASE API is in-memory-data-service
+  // ... our collectionName is cats
+  private catsUrl = 'api/cats'; // this is the URL to the web api
+
   // we are injecting a message service into our cat service
   //... all of which will be available to our Cat component
-  constructor(private messageService: MessageService) { }
+  constructor(
+    private messageService: MessageService,
+    private http: HttpClient
+    ) { }
 
   // this is a synchronous method signature
   // getCats(): Cat[] {
   //   return CATS;
   // }
 
+  //** GET cats from the server */
   getCats(): Observable<Cat[]> {
     // let's also send a message after fetching all of the cats
     this.messageService.add('CatService: fetched cats')
-    return of(CATS);
-    // of(CATS) we want to return an Observable (an array of Cats).  This will emit a single value
-
-    // An observable is a function with a few special characteristics
-    //...It implements something called an Observer Design Pattern
-    //...An Observable returns a stream of values to an observer over time
-    // this can be done synchronously or asynchronously
-
-    /*
-    We get Observables from the RxJS library (Reactive Extensions for JavaScript)
-   - RxJS gives us functions to make it easier to compose asynchronous based ced code.
-
-    */
+    return this.http.get<Cat[]>(this.catsUrl)
+      .pipe(
+        // tap allows us to DO something with the values
+        // without changing the values themselves
+        tap(_=> this.log('fetched cats!')),
+        catchError(this.handleError<Cat[]>('getCats', []))
+      );
    }
+
+   // 1.) PIPES in ANGULAR take data and format it in a particular way
+   // 2.) PIPE() in RxJS is a function 
 
    getCat(id: number): Observable<Cat> {
      // let's also send a message saying that we fetched a particular cat:
      this.messageService.add(`CatService: fetched cat w/ id=${id}`);
      return of(CATS.find(cat => cat.id === id));
+   }
+
+   private log(message: string) {
+     this.messageService.add(`CatService: ${message}`);
+   }
+
+
+
+   /**
+    * Handle HTTP operation that failed 
+    * Let the app continue
+    * @param operation - name of the operation that fails
+    * @param result - optional value to return as the OBSERVABLE result 
+    */
+   private handleError<T>(operation = 'operation', result?: T) {
+     return (error: any): Observable<T> => {
+        // send the error to a remote logging infrastructure
+        console.error(error)  // this will log it to the console instead
+     
+        this.log(`${operation} failed: ${error.message}`);
+
+        // this step lets the app keep running by returning an empty result
+        return of(result as T);
+      }
+      // After reporting the error to the console, the handler
+      // a message (user friendly) and return a safe value.
+
+
    }
 
 }
