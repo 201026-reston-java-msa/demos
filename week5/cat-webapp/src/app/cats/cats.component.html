@@ -4,15 +4,18 @@ data in HTML.  Here we use an UpperCase Pipe -->
 <ul class="cats">
     <!--*ngFor allows us to iterate through a collection within our application
     and perform an operation on each element -->
-    <li *ngFor="let cat of cats" [class.selected]="cat === selectedCat" (click)="onSelect(cat)">
-        <!--The above is an example of event-binding syntax-->
-        <span class="box">{{cat.id}}</span> {{cat.name}}
+    <li *ngFor="let cat of cats" [class.selected]="cat === selectedCat">
+        <a routerLink="/detail/{{cat.id}}">
+            <!--The above is an example of event-binding syntax-->
+            <span class="box">{{cat.id}}</span> {{cat.name}}
+        </a>
     </li>
 </ul>
 
 <!--This is propery-->
 <!-- We make the cat property -->
-<app-cat-details [cat]="selectedCat"></app-cat-details>
+
+<!-- <app-cat-details [cat]="selectedCat"></app-cat-details> -->
 
 <!--Here we will use the cat-details component selector
 and then property binding to give our parent component control over

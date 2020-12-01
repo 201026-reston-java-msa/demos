@@ -15,7 +15,7 @@ import { Component, OnInit } from '@angular/core';
 export class CatsComponent implements OnInit {
 
   cats: Cat[]; // this property is assigned thanks to our getCats() method ngOnInit
-  selectedCat: Cat; // this property is not assigned a value when we inititalize...
+  // selectedCat: Cat; // this property is not assigned a value when we inititalize...
 
   // we will expose this array for binding 
 
@@ -28,10 +28,10 @@ export class CatsComponent implements OnInit {
     this.getCats();
   }
 
-  onSelect(cat: Cat): void {
-    this.selectedCat = cat;
-    this.messageService.add(`CatsComponent: Selected cat id=${cat.id}`);
-  }
+  // onSelect(cat: Cat): void {
+  //   this.selectedCat = cat;
+  //   this.messageService.add(`CatsComponent: Selected cat id=${cat.id}`);
+  // }
 
   // This is synchronous
   // getCats(): void {

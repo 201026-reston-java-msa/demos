@@ -140,3 +140,8 @@ Angular services are singleton objects that get instantiated only once during th
 The **Observer Pattern** is a software design pattern in which an object, called the subject, maintains a list of its dependents, called observers, and notifies them automatically of state changes. 
     - This pattern is similar (but not identical) to the [publish/subscribe](https://en.wikipedia.org/wiki/Publish%E2%80%93subscribe_pattern) design pattern.
 
+
+## In-App Navigation: Routing to Views
+In a Single Page Application, we change what the user sees by showing or hiding portions of the display which corresponds to particular components...instead of reaching out to a server to get a new page.
+    - We use the **Angular Router** which handles navigation from one view to the next
+    - **Router** enables navigation by interpreting a browser URL as in *instruction* to change the view.

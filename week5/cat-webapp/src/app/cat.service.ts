@@ -12,7 +12,7 @@ import { Observable, of }  from 'rxjs';
 export class CatService {
   // we are injecting a message service into our cat service
   //... all of which will be available to our Cat component
-  constructor(private MessageService: MessageService) { }
+  constructor(private messageService: MessageService) { }
 
   // this is a synchronous method signature
   // getCats(): Cat[] {
@@ -21,7 +21,7 @@ export class CatService {
 
   getCats(): Observable<Cat[]> {
     // let's also send a message after fetching all of the cats
-    this.MessageService.add('CatService: fetched cats')
+    this.messageService.add('CatService: fetched cats')
     return of(CATS);
     // of(CATS) we want to return an Observable (an array of Cats).  This will emit a single value
 
@@ -35,6 +35,12 @@ export class CatService {
    - RxJS gives us functions to make it easier to compose asynchronous based ced code.
 
     */
+   }
+
+   getCat(id: number): Observable<Cat> {
+     // let's also send a message saying that we fetched a particular cat:
+     this.messageService.add(`CatService: fetched cat w/ id=${id}`);
+     return of(CATS.find(cat => cat.id === id));
    }
 
 }
