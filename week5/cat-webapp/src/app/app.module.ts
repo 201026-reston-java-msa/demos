@@ -11,6 +11,7 @@ import { MessagesComponent } from './messages/messages.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { HttpClientModule } from '@angular/common/http';
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
+import { CatSearchComponent } from './cat-search/cat-search.component';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
     CatsComponent,
     CatDetailsComponent,
     MessagesComponent,
-    DashboardComponent
+    DashboardComponent,
+    CatSearchComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,15 @@
+<div id="search-component">
+    <h4><label for="search-box">Cat Search</label></h4>
+
+    <input #searchBox id="search-box" (input)="search(searchBox.value)"/>
+
+    <ul class ="search-result">
+        <!-- we use the async pipe to subscirbe to an observable
+        The $ convention indicates that cats$ is an Observable-->
+        <li *ngFor="let cat of cats$ | async">
+            <a routerLink="/detail/{{cat.id}}">
+                {{cat.name}}
+            </a>
+        </li>
+    </ul>
+</div>

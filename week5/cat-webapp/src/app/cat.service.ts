@@ -70,6 +70,21 @@ export class CatService {
     //  return of(CATS.find(cat => cat.id === id));
    }
 
+
+   /*GET cats whose name contains search term*/
+   searchCats(term: string): Observable<Cat[]> {
+     if (!term.trim()) {
+       return of([]);
+     }
+
+     return  this.http.get<Cat[]>(`${this.catsUrl}/?name=${term}`).pipe(
+       tap(x => x.length ? 
+        this.log(`found cats matching ${term}`) :
+        this.log(`no cats foudn matching ${term}`)),
+        catchError(this.handleError<Cat[]>('searchCats', [])) 
+     );
+   }
+
    /** This is a PUT request  (we make changes to the server regarding one CAT that lives there
     * There are 3 params to the HttpClient.put() method:
     * 
