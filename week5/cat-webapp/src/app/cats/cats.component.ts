@@ -45,6 +45,24 @@ export class CatsComponent implements OnInit {
   // The subscribe method is going to pass the emitted array
   // to the callback which assigns this array as a property 
   //of our component
+
+  add(name: string): void {
+    name = name.trim();
+    if (!name) {return;}
+
+    this.catService.addCat({ name } as Cat)
+      .subscribe(cat => {
+        this.cats.push(cat);
+      })
+  }
+
+  delete(cat: Cat): void {
+    this.cats = this.cats.filter(c => c !== cat);  // this is so the component maintains its own
+  
+    // If you DON'T subscribe, then the service will
+    // not send the delete request to the server
+    this.catService.deleteCat(cat).subscribe();
+  }
 }
 
 
