@@ -26,10 +26,12 @@ describe('AppComponent', () => {
     expect(app.title).toEqual('intro-to-testing');
   });
 
-  it('should render title', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    fixture.detectChanges();
-    const compiled = fixture.nativeElement;
-    expect(compiled.querySelector('.content span').textContent).toContain('intro-to-testing app is running!');
-  });
+  // This test will no longer pass because we don't render the title on the app.component.html template
+
+  // it('should render title', () => {
+  //   const fixture = TestBed.createComponent(AppComponent);
+  //   fixture.detectChanges();
+  //   const compiled = fixture.nativeElement;
+  //   expect(compiled.querySelector('.content span').textContent).toContain('intro-to-testing app is running!');
+  // });
 });
