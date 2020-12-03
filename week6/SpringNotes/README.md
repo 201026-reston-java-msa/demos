@@ -1,6 +1,8 @@
 # Spring QC Questions
 *These will be asked on **Monday Dec. 14th***
 
+> Watch [this video on Spring Framework for a clear overview!](https://www.youtube.com/watch?v=gq4S-ovWVlM&ab_channel=JavaBrains)
+
 ### Spring Core
 
 1.  What are Spring Projects and Spring Modules?
