@@ -1,6 +1,8 @@
 # Week 6: Angular & Spring
 *This past week we covered the rest of Angular and began covering Spring Framework.  For QC on **Monday Dec. 7th** you will be asked qc questions soley about **Angular***. 
 
+> Go [here](https://github.com/201026-reston-java-msa/demos/tree/main/week6/SpringNotes) for the QC questions you'll be asked on Monday Dec. 14th about Spring Framework.
+
 ### Angular QC Questions:
 *You may be asked these questions on Monday Dec. 7th during QC**
 
