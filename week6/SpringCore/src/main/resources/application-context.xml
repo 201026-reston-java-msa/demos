@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- Here we're going to use XML configuration of the Spring ApplicationContext... 
+		You can also use annotations. Spring Configurations tell the IoC container 
+		how to build each bean and its relationships -->
+
+
+	<!-- bean definitions here -->
+
+	<!-- The first bean to register is the Main.java which uses CONSTRUCTOR 
+		INJECTION to REFERENCE MotdServiceBean -->
+	<bean name="MainBean" class="com.example.Main">
+		<constructor-arg name="motdServiceBean"
+			ref="MotdServiceBean" />
+	</bean>
+
+
+	<!-- The next bean to register is the MotdServiceBean. We will do so with 
+		SETTER INJECTION, but we could use constructor injection if we choose We 
+		will also use a cutom init method of the bean lifecycle to make sure that 
+		the MotdServiceBean initializes the motd list -->
+
+	<bean name="MotdServiceBean"
+		class="com.example.services.MotdServiceBean" init-method="initMotds">
+		<property name="defaultMotdIndex"> <value>2</value> </property>
+	</bean>
+</beans>
+
+
+
+
+
+
+
+
