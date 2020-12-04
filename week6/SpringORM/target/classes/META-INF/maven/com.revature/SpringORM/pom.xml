@@ -20,7 +20,6 @@
 			<version>1.2.17</version>
 		</dependency>
 
-
 		<!-- Spring-context 4.3.9 -->
 		<dependency>
 			<groupId>org.springframework</groupId>
@@ -39,6 +38,13 @@
 			<groupId>org.hibernate</groupId>
 			<artifactId>hibernate-core</artifactId>
 			<version>4.3.11.Final</version>
+		</dependency>
+
+		<!--  postgresql driver  -->
+		<dependency>
+			<groupId>org.postgresql</groupId>
+			<artifactId>postgresql</artifactId>
+			<version>42.2.9</version>
 		</dependency>
 
 	</dependencies>

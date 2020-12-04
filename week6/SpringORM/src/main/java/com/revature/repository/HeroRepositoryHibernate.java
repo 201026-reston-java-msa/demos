@@ -22,7 +22,7 @@ public class HeroRepositoryHibernate implements HeroRepository{
 	private SessionFactory sessionFactory;
 	
 	public HeroRepositoryHibernate() {
-		logger.trace("Injectoin session factory bean");
+		logger.trace("Injection session factory bean");
 	}
 	
 	public void save(Hero hero) {
