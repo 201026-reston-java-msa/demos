@@ -1,0 +1,14 @@
+<!-- Nav goes at the top...app-nav  -->
+<app-nav></app-nav>
+
+<!-- create a div.....incporporate some bootstrap containers + a panel-->
+<div class="container-fluid">
+  <div class="col-md-4 col-md-offset-4">
+    <div class="panel panel-default">
+      <!-- This is where our route is injected -->
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+
+</div>
+    <!-- Within the div, I'll provide the router-outlet directive-->
