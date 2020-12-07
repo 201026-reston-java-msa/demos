@@ -1,12 +1,11 @@
 import { catchError } from 'rxjs/operators';
-import { throwError } from 'rxjs';
 import { ClientMessage } from './../models/client-message.model';
 import { HERO_URL } from './../../environments/environment.prod';
 import { Observable } from 'rxjs';
 import { Hero } from './../models/hero.model';
 import { HttpClient, HttpErrorResponse, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import 'rxjs/Rx';
+import { of } from 'rxjs'
 
 
 
@@ -23,43 +22,37 @@ export class HeroService {
 
   public registerHero(hero: Hero): Observable<ClientMessage> {
     return this.http
-      .post(`${HERO_URL}register`, hero, this.httpOptions).pipe(
-        catchError(this.handleError<any>('not working'))
+      .post(`${HERO_URL}register`, hero, this.httpOptions)
+      .pipe(
+        catchError(this.handleError<any>('cannot register hero'))
       )
-
   }
 
   public findHero(hero: Hero): Observable<Hero> {
     return this.http
-      .post(`${HERO_URL}register`, hero)
-      .catch(this.handleError)
+      .post<Hero>(`${HERO_URL}findHero`, hero)
+      .pipe(
+        catchError(this.handleError<Hero>('get hero', null))
+      )
   }
-
 
   public findAllHeroes(): Observable<Hero[]> {
     return this.http
-      .get(`${HERO_URL}findAllHeroes`)
-      .catch(this.handleError);
+    .get<Hero[]>(`${HERO_URL}findAllHeroes`)
+    .pipe(
+      catchError(this.handleError<Hero[]>('getHeroes', []))
+      );
     }
 
-  // private handleError(error: HttpErrorResponse) {
-  //   if (error.error instanceof ErrorEvent) {
-  //     // A client-side or network error occurred. Handle it accordingly.
-  //     console.error('An error occurred:', error.error.message);
-  //   } else {
-  //     // The backend returned an unsuccessful response code.
-  //     // The response body may contain clues as to what went wrong.
-  //     console.error(
-  //       `Backend returned code ${error.status}, ` +
-  //       `body was: ${error.error}`);
-  //   }
-  //   // Return an observable with a user-facing error message.
-  //   return throwError(
-  //     'Something bad happened; please try again later.');
-  // }
+  private handleError<T>(operation = 'operation', result?: T) {
+      return (error: any): Observable<T> => {
+  
+        // TODO: send the error to remote logging infrastructure
+        console.error(error); // log to console instead
 
-  private handleError(error: Response) {
-    return Observable.throw(error.statusText);
-  }
+        // Let the app keep running by returning an empty result.
+        return of(result as T);
+      };
+    }
   
 }
