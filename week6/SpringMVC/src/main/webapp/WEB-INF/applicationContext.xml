@@ -20,7 +20,7 @@
 	<mvc:resources mapping="/static/**" location="/static/" />
 
 	<!-- Enable @Transactional -->
-	<!-- Transactional annotation defines the scope of a single database transaction -->
+
 	<tx:annotation-driven />
 
 	<!-- Package Scan -->
@@ -29,11 +29,10 @@
 	<context:component-scan base-package="com.revature.view" />
 	<context:component-scan base-package="com.revature.rest" />
 
-	<!-- DataSource Configuration here (JDBC) -->
+
 	<bean name="dataSource"
 		class="org.springframework.jdbc.datasource.DriverManagerDataSource">
-		<!-- If you want to use Environment variables, use the example below -->
-		<!--<property name="url" value ="#{systemEnvironment['ENV NAME']}"> -->
+
 
 		<property name="driverClassName"
 			value="org.postgresql.Driver" />
@@ -43,10 +42,10 @@
 		<property name="password" value="postgres" />
 	</bean>
 
-	<!-- SessionFactory Configuration (Hibernate) -->
+
 	<bean name="sessionFactory"
 		class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
-		<!-- Manually Inject Datasource ^ -->
+
 		<property name="dataSource" ref="dataSource" />
 
 		<!-- Annotation Mapping -->
@@ -62,7 +61,7 @@
 
 	</bean>
 
-	<!-- bean TransactionManager (this is a bean!) (Hibernate) -->
+
 	<bean name="transactionManager"
 		class="org.springframework.orm.hibernate4.HibernateTransactionManager">
 		<!-- This makes all sessions a transaction -->

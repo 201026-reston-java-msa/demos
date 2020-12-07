@@ -26,25 +26,31 @@ public class HeroControllerImpl implements HeroController{
 	// use Autowiring for a HeroService property
 	@Autowired
 	private HeroService heroService;
+
+	
 	/**
+	 * @RequestMapping(value="/register.app", method=RequestMethod.POST)
+	 * Is the same as we have below.
 	 * 
-	 * @RequestMapping
-	 * @return
+	 * @ResponseBody marshal our POJOS into JSON with Jackson (because we have the dependency).
+	 * 
+	 * @RequestBody unmarshals JSON available in the request body into our POJO.
 	 */
 	@PostMapping("/register")
 	public @ResponseBody ClientMessage registerHero(@RequestBody Hero hero) {
 		return (heroService.registerHero(hero)) ? REGISTRATION_SUCCESSFUL : SOMETHING_WRONG;
 	}
-	
+
 	@PostMapping("/findHero")
 	public @ResponseBody Hero findHero(@RequestBody Hero hero, HttpServletRequest request) {
 		request.getSession();
 		return heroService.getHero(hero.getName());
 	}
-	
+
 	@GetMapping("/findAllHeroes")
 	public @ResponseBody List<Hero> findAllHeroes() {
 		return heroService.getAllHeroes();
 	}
+
 	
 }
