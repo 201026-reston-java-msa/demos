@@ -24,9 +24,9 @@ A RESTful Web Service is a lightweight, maintainable, and scalable service that 
 
 ### 6 REST Constraints (*know these and google what they mean!*)
 There are six architectural constraints which makes any web service are listed below:
-- Uniform Interface
-- Stateless
-- Cacheable
-- Client-Server
-- Layered System
-- Code on Demand (optional)
+1. Uniform Interface
+2. Stateless
+3. Cacheable
+4. Client-Server
+5. Layered System
+6. Code on Demand (optional)
