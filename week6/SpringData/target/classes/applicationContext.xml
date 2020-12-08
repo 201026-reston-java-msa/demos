@@ -22,13 +22,10 @@
 		base-package="com.revature.service" />
 		
 	<!-- DataSource Configuration here (JDBC) -->
-	<bean name="dataSource"
-		class="org.springframework.jdbc.datasource.DriverManagerDataSource">
-		<!-- If you want to use Environment variables, use the example below -->
-		<!--<property name="url" value ="#{systemEnvironment['ENV NAME']}"> -->
+	<bean name="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
 
-		<property name="driverClassName"
-			value="org.postgresql.Driver" />
+
+		<property name="driverClassName" value="org.postgresql.Driver" />
 		<property name="url"
 			value="jdbc:postgresql://localhost:5432/postgres" />
 		<property name="username" value="postgres" />
@@ -57,7 +54,7 @@
 		
 		<!--  JPA persistance Provider needed for EntityManagerFactory, specific: Hibernate -->
 		<property name="jpaVendorAdapter">
-			<bean class="org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter"
+			<bean class="org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter" />
 		</property>
 	</bean>
 
