@@ -7,39 +7,34 @@
 		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd
 		http://www.springframework.org/schema/data/jpa
     	http://www.springframework.org/schema/data/jpa/spring-jpa.xsd">
-
-	<!-- Enable @Transactional --> 
-	<!-- Transactional annotation defines the scope of a single database transaction 
+	<!-- Enable @Transactional -->
+	<!-- Transactional annotation defines the scope of a single database transaction
 		. -->
 	<tx:annotation-driven />
-	
-	
 	<jpa:repositories base-package="com.revature.repository" />
-
+	<!-- Package Scan -->
 	<context:component-scan
 		base-package="com.revature.repository" />
 	<context:component-scan
 		base-package="com.revature.service" />
-		
+	<!-- Hibernate Integration with Contextual Sessions -->
 	<!-- DataSource Configuration here (JDBC) -->
-	<bean name="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
-
-
-		<property name="driverClassName" value="org.postgresql.Driver" />
-		<property name="url"
-			value="jdbc:postgresql://localhost:5432/postgres" />
+	<bean name="dataSource"
+		class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+		<!-- If you want to use Environment variables, use the example below -->
+		<!--<property name="url" value ="#{systemEnvironment['ENV NAME']}"> -->
+		<property name="driverClassName"
+			value="org.postgresql.Driver" />
+		<property name="url" value="jdbc:postgresql://database-2.cjmgqna5svfy.us-east-2.rds.amazonaws.com:5432/postgres"/>
 		<property name="username" value="postgres" />
 		<property name="password" value="postgres" />
 	</bean>
-
 	<!-- Instead of SessionFactory Configuration (Hibernate) -->
 	<!-- WE USE ENTITY_MANAGER_FACTORY -->
 	<bean name="entityManagerFactory"
 		class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">
-		
 		<!-- Manually Inject Datasource ^ -->
 		<property name="dataSource" ref="dataSource" />
-
 		<!-- Annotation Mapping -->
 		<property name="packagesToScan" value="com.revature.model" />
 		<!-- jpa properties instead of hibernate properties -->
@@ -51,13 +46,11 @@
 				<prop key="hibernate.default_schema">public</prop>
 			</props>
 		</property>
-		
 		<!--  JPA persistance Provider needed for EntityManagerFactory, specific: Hibernate -->
 		<property name="jpaVendorAdapter">
-			<bean class="org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter" />
+			<bean class="org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter"/>
 		</property>
 	</bean>
-
 	<!-- bean TransactionManager (this is a bean!) (Hibernate) -->
 	<bean name="transactionManager"
 		class="org.springframework.orm.jpa.JpaTransactionManager">

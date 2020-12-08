@@ -5,13 +5,27 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.NamedStoredProcedureQuery;
+import javax.persistence.ParameterMode;
 import javax.persistence.SequenceGenerator;
+import javax.persistence.StoredProcedureParameter;
 import javax.persistence.Table;
 
 //HERE WE WILL USE THE @nAMEDsTOREDpROCEDUREQUERY
 //procuedureName
 //parameters
 
+
+// In Spring Data JPA< the @Procuedure annotations are used to map our entities to methods(procedures)
+// created in our DB.
+
+/*For Stored Procedures*/
+@NamedStoredProcedureQuery(name="INSERT_JEDI", procedureName="INSERT_JEDI",
+parameters = {
+		@StoredProcedureParameter(mode=ParameterMode.IN, name="ID", type=Integer.class),
+		@StoredProcedureParameter(mode=ParameterMode.IN, name="NAME", type=String.class),
+		@StoredProcedureParameter(mode=ParameterMode.IN, name="SABER_COLOR", type=String.class)
+})
 
 @Entity
 @Table(name="JEDI")
