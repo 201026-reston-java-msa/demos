@@ -3,3 +3,4 @@
 2020-12-09 07:39:41 TRACE HeroServiceImpl:21 - Injection using Autowired Hero Repository in HeroServiceImpl
 2020-12-09 07:41:20 TRACE HeroServiceImpl:21 - Injection using Autowired Hero Repository in HeroServiceImpl
 2020-12-09 07:45:21 TRACE HeroServiceImpl:21 - Injection using Autowired Hero Repository in HeroServiceImpl
+2020-12-09 10:16:08 TRACE HeroServiceImpl:21 - Injection using Autowired Hero Repository in HeroServiceImpl

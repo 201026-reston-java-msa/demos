@@ -6,3 +6,5 @@ $$
 	END
 $$
 LANGUAGE plpgsql
+
+SELECT VERSION ();
