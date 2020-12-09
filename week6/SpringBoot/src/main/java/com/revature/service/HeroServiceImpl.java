@@ -33,11 +33,10 @@ public class HeroServiceImpl implements HeroService{
 		return heroRepository.findAll();
 	}
 
-	@Override
 	public Hero getHero(String name) {
 		try {
-			return heroRepository.findByNameIgnoresCase(name).get(0);
-		} catch(IndexOutOfBoundsException e) {
+			return heroRepository.findByNameIgnoreCase(name).get(0);
+		} catch (IndexOutOfBoundsException e) {
 			return null;
 		}
 	}

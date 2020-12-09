@@ -9,5 +9,5 @@ import com.revature.model.Hero;
 
 @Transactional
 public interface HeroRepository extends JpaRepository<Hero, Long>{
-	List<Hero> findByNameIgnoresCase(String name);
+	List<Hero> findByNameIgnoreCase(String name);
 }

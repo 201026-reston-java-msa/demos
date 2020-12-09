@@ -20,7 +20,7 @@ import com.revature.ajax.ClientMessage;
 import com.revature.model.Hero;
 import com.revature.service.HeroService;
 
-@RestController("heroController")
+@Controller("heroController")
 @CrossOrigin(origins = "http://localhost:4200")
 public class HeroControllerImpl implements HeroController{
 
