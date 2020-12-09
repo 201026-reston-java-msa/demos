@@ -9,5 +9,5 @@ export const environment = {
 export const HERO_URL = `http://localhost:8090/`;
 ```
 
-The Angular application is that same as we created in our SpringMVCAngular demo which you can find [here](https://github.com/201026-reston-java-msa/demos/tree/main/week6/SpringMVCAngular/angular-hero).
+The Angular application is that same as we created in our SpringMVCAngular demo which you can find [here](https://github.com/201026-reston-java-msa/demos/tree/main/week6/SpringMVCAngular/angular-hero).  The only thing you need to change is the exported `HERO_URL` (see above) which is found in the `environment.ts`/`environment.prod.ts` file.
 
