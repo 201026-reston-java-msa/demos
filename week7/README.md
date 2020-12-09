@@ -31,3 +31,20 @@ There are six architectural constraints which makes any web service are listed b
 4. Client-Server
 5. Layered System
 6. Code on Demand (optional)
+
+## What is SOAP?
+- Simple Object Access Protocol
+- XML-based web service protocol
+- Legacy protocol: most companies switching to RESTful web services
+- Can be used in conjunction with any transport-layer protocol (HTTP, SMTP, FTP, etc)
+  - When used with HTTP, POST requests are used
+- Uses a contract (WSDL)
+  - WSDL = Web service description language
+  - Contract first vs contract last development
+- Built-in security
+- SOAP message elements
+  - envelope
+  - header
+  - body
+  - fault
+
