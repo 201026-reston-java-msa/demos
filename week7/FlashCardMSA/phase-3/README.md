@@ -238,4 +238,4 @@ routes:
 
 We have seen how to use OpenFeign instead of RestTemplate for stronger type-safety and better architectural design. After that we introduced the Circuit-Breaker design pattern by leveraging Netflix Hystrix through Spring Cloud Circuit Breaker in order to fail gracefully in case interservice communication breaks down.
 
-Next in [Phase 4](../phase4), we will look at centralizing our configuration that is currently spanning across multiple services. We are starting to find that moving between different services in order to change a configuration is becoming increasingly inconvenient. By storing all of our configuration in a GitHub repository, we can maintain a history of all changes to the confguration for every microservice.
+Next in Phase 4, we will look at centralizing our configuration that is currently spanning across multiple services. We are starting to find that moving between different services in order to change a configuration is becoming increasingly inconvenient. By storing all of our configuration in a GitHub repository, we can maintain a history of all changes to the confguration for every microservice.
