@@ -20,6 +20,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.revature.ajax.ClientMessage;
 import com.revature.model.Hero;
+import com.revature.model.HeroList;
 import com.revature.service.HeroService;
 
 
@@ -35,7 +36,7 @@ import com.revature.service.HeroService;
  */
 @Controller("heroController")
 @CrossOrigin(origins = "http://localhost:4200")   //http://localhost:8080/SpringRESTDemo/hero/register
-@RequestMapping(path="/hero", produces = {MediaType.APPLICATION_JSON_VALUE, MediaType.APPLICATION_XML_VALUE})
+//@RequestMapping(path="/hero", produces = {MediaType.APPLICATION_JSON_VALUE, MediaType.APPLICATION_XML_VALUE})
 public class HeroControllerImpl implements HeroController{
 
 	// use Autowiring for a HeroService property
@@ -66,14 +67,20 @@ public class HeroControllerImpl implements HeroController{
 	@PostMapping("/findHero")
 	public @ResponseBody ResponseEntity<Object> findHero(@RequestBody Hero hero, HttpServletRequest request) {
 		// set Hero foundHero = to something....
+		Hero foundHero = heroService.getHero(hero.getName());
 		
 		// set up a condition : IF the found hero is not null....
-		return heroService.getHero(hero.getName());
+		if (foundHero != null) {
+			return new ResponseEntity<>(foundHero, HttpStatus.OK);
+		} else {
+			return new ResponseEntity<>(HERO_NOT_FOUND, HttpStatus.NOT_FOUND);
+		}
 	}
 
 	@GetMapping("/findAllHeroes")
-	public @ResponseBody List<Hero> findAllHeroes() {
-		return heroService.getAllHeroes();
+	public @ResponseBody ResponseEntity<HeroList> findAllHeroes() {
+		System.out.println("in find all heroes endopint");
+		return new ResponseEntity<>(new HeroList(heroService.getAllHeroes()), HttpStatus.OK);
 	}
 
 	
