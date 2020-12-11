@@ -1,6 +1,6 @@
 ## What will you be asked on Monday Dec. 14th in QC/Interviews?
 - Microservices (on a conceptual level! Just scroll down and use this document)
-- REST (***You will be asked about the 6 Constraints***) 
+- REST (*notes below and **you will be asked about the 6 Constraints***) 
   - Here is a good [overview of REST](https://www.smashingmagazine.com/2018/01/understanding-using-rest-api/) and here is another [great resource on the 6 REST Constraints](https://restfulapi.net/)
 - Spring (click link below to access these notes)
 ### Go to [this link for all Spring QC questions and all notes on Spring](https://github.com/201026-reston-java-msa/demos/tree/main/week6/spring-notes)
