@@ -1,3 +1,11 @@
+## What will you be asked on Monday Dec. 14th in QC/Interviews?
+- Spring and Rest
+- Scroll down and review notes on REST. (***You will be asked about the 6 Constraints***).
+  - Here is a good [overview of REST](https://www.smashingmagazine.com/2018/01/understanding-using-rest-api/) and here is another [great resource on the 6 REST Constraints](https://restfulapi.net/)
+
+### Go to [this link for all Spring QC questions and all notes on Spring](https://github.com/201026-reston-java-msa/demos/tree/main/week6/spring-notes)
+
+
 
 # Week 7: Web & MicroServices
 
