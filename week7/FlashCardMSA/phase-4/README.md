@@ -12,7 +12,7 @@ You will need an account on any Git Repository Service, such as [GitHub](https:/
 
 If we want to centralize our configuration, then we need to store it all in a single location, accessible in the cloud. A perfect solution for this is a Git Repository. Any Git Repository will do, but in this demo, we will be using GitHub.
 
-Create a new Git Repository. You may name it whatever you wish, but ours will simply be named `config`. It is located [here](https://github.com/IkenoXamos/config-2).
+Create a new Git Repository. You may name it whatever you wish, but ours will simply be named `config`. It is located [here](https://github.com/201026-reston-java-msa/config).
 
 Normally, we would clone this Git Repository to update the configuration locally, but for this demonstration, we will just modify the repository through GitHub's UI.
 
@@ -242,4 +242,4 @@ You should see the response change from `Hello World!` to `Hello World, this was
 
 We have increased the maintainability of our application's codebase by centralizing the various configuration files into a single Git Repository. Now we will have centralized versioning for every microservice configuration, with the new ability to dynamically refresh the configuration at runtime.
 
-The final issue to tackle in [Phase 5](../phase5) is to resolve database consistency by using a Messaging Queue to synchronize all instances of a service.
+The final issue to tackle in Phase 5 is to resolve database consistency by using a Messaging Queue to synchronize all instances of a service.
