@@ -127,7 +127,8 @@ server.port=8888
 spring.application.name=config
 
 # Configure Git Repo for Centralized Configuration
-spring.cloud.config.server.git.uri=https://github.com/IkenoXamos/config-2
+spring.cloud.config.server.git.uri=https://github.com/201026-reston-java-msa/config
+spring.cloud.config.server.git.default-label=main
 ```
 
 Note: Port 8888 is the default port for Cloud Config Servers and the git URI should be for the repository you created in Step 1
