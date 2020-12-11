@@ -15,8 +15,8 @@
 
 <br/>
 
-* [data](../examples/spring-data)
-* [boot](../examples/spring-boot-web)
+* [data (a Spring Project)](https://github.com/201026-reston-java-msa/demos/blob/main/week6/spring-notes/spring-projects.md)
+* [boot (a Spring Project)](https://github.com/201026-reston-java-msa/demos/blob/main/week6/spring-notes/spring-projects.md)
 
 # Spring QC Questions
 *These will be asked on **Monday Dec. 14th***
