@@ -1,4 +1,5 @@
 # AOP -> Aspect Oriented Program
+- Check out this YouTube video for a good introduction https://www.youtube.com/watch?v=DuFPj8MlAVo&ab_channel=Bharaththippireddy
 - Breaking down program logic into distinct cross cutting concerns
 - Aspect Oriented Programming - aspect is our unit of modularity
 - Aspect handles a cross cutting concerns
