@@ -1,5 +1,5 @@
 ## What will you be asked on Monday Dec. 14th in QC/Interviews?
-- Spring and Rest
+- Spring, REST, and **Microservices** (on a conceptual level! Just scroll down and use this document)
 - Scroll down and review notes on REST. (***You will be asked about the 6 Constraints***).
   - Here is a good [overview of REST](https://www.smashingmagazine.com/2018/01/understanding-using-rest-api/) and here is another [great resource on the 6 REST Constraints](https://restfulapi.net/)
 
