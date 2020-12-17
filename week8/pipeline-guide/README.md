@@ -1,4 +1,4 @@
-### Below is a Jenkins Pipeline Demo that I've created for you to follow along.  I suggest that you clone this entire repo and copy the shell scripts into a folder as described below.  
+### Below is a Jenkins Pipeline Demo to follow along.  I suggest that you clone this entire repo and copy the shell scripts into a folder as described below.  
 <br>
 
 ### *IF YOU GET STUCK REMEMBER THAT THERE IS A VIDEO THAT YOU CAN REFER TO. IT IS THE VIDEO RECORDING ON FRIDAY NOVEMBER 20th AT 1:24 PM EST.*
