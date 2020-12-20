@@ -1,4 +1,4 @@
-*For SQL QC-Questions go [here](https://github.com/201026-reston-java-msa/demos/blob/main/week2/sql-qc-questions.md)
+### *For SQL QC-Questions go [here](https://github.com/201026-reston-java-msa/demos/blob/main/week2/sql-qc-questions.md)*
 
 # AWS & Cloud Computing
 *The following are questions that you may be asked about Amazon Web Services and Cloud Computing Models.*
