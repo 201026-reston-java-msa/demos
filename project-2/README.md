@@ -7,6 +7,7 @@ When you're presenting, you're welcome to provide a brief slideshow demonstratin
 ## Required Technologies
 - Spring MVC
 - Angular
+- Consume a RESTful API
 - Amazon RDS
 - Hibernate
 - GitHub (*Each team must maintain a repository to which all members contribute*)
