@@ -23,9 +23,10 @@ When you're presenting, you're welcome to provide a brief slideshow demonstratin
 - Deploy on an EC2
 - Set up a Jenkins Pipeline for the Project
 
-## What's Due Friday March 19th by 11am?
+## ⁉️ What's Due Friday March 19th by 11am? ⁉️
 - **Project Proposal** - you're welcome to use the word document provided in this directory or make a copy of [this google doc](https://docs.google.com/document/d/1F2UKzwIcsxWdGlY5bIsM6XfOyx2NAPiL0VXWOLcLTkk/edit?usp=sharing)
-  > Slack this document to Sophia.  The proposal is a brief description of your application, team members, and Scrum Master.
+  > Slack this document to Sophia.  The proposal is a brief description of your application, team members, and Team Lead.
+  > The *Team Lead* represents the point of contact for the team and will be reporting updates in every morning's standup.
 - You will have you your first Stand-Up at 10:00am that morning, introducing your project idea and speaking on your planning process.
 
 ## Agile Scrum Guidelines
