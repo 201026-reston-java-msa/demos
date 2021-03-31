@@ -117,6 +117,9 @@ There are six architectural constraints which makes any web service are listed b
 # Service Oriented Architecture - *SOA*
 - SOA involves designing your application as a collection of services
   - **What's a Service?** Services are programs that run independently and achieve some business logic and communicate over a network.
+
+- Service-oriented architecture (SOA) is an enterprise-wide approach to software development that takes advantage of reusable software components, or services. Each service is comprised of the code and data integrations required to execute a specific business function—for example, checking a customer’s credit, signing in to a website, or processing a mortgage application.
+
 - See Martin Fowler's Essay on SOA ["Service Oriented Ambiguty"](https://martinfowler.com/bliki/ServiceOrientedAmbiguity.html)
 - See OpenGroup's [introduction to Service Oriented Architecture](https://www.opengroup.org/soa/source-book/soa/p1.html)
 
@@ -127,7 +130,7 @@ Microservices - also known as the microservice architecture - is an architectura
 - Independently deployable. 
 - Organized around business capabilities
 
-- MSA is a subset of SOA, but it satisfies a few other conditions:
+- MSA is a subset of SOA, but it satisfies a few other conditions: :star: :star: :star:
   - **Each Microservice MUST satisfy the SRP (Single Responsibility Principle)
     - Each Module should be responsible for ONE thing! (And do it well).
   - MSA can't be composed of other services
@@ -136,6 +139,8 @@ Microservices - also known as the microservice architecture - is an architectura
 - In older models of Enterprise level SOA, services communicate using SOAP, so that means that each service has a `WSDL` which it uses to communicate with another service.
 - Today, most companies use RESTful Services
 - MSA in general, use **Service Registries and Discovery Clients** to allow communication without centralized routing.
+
+> Like SOA, microservices architectures are made up of loosely coupled, reusable, and specialized components. However, rather than being adopted enterprise-wide, microservices are typically used to build individual applications in a way that makes them more agile, scalable, and resilient.
 
 # Benefits of MSA over Monoliths
 Microservices are:
